@@ -3,39 +3,10 @@ import java.util.*;
 
 public class Aula25v01{
     
-    
-
     public Aula25v01(){};
     
     public static void main(String[] args){
         
-//        //MAIN DE PRUEBA V1.1
-//        //Inicializa un objeto de la clase Inscripcion.
-//        Inscripcion inscripcionPrueba = new Inscripcion();
-//        
-//        //Asigna valores a cada atributo.
-//        inscripcionPrueba.setEstado(1);
-//        inscripcionPrueba.setFecha(2);
-//        inscripcionPrueba.setIdInscripcion(0);
-//        inscripcionPrueba.setImporte(32.1);
-//        
-//        //Inicializa un objeto de la clase Alumno.
-//        Alumno alumno_1 = new Alumno();
-//        
-//        //Agrega el objeto de la clase Inscricion
-//        //a la lista pseudoAtributo de la clase Alumno.
-//        //alumno_1.inscripcion_1.add(inscripcionPrueba);
-//        
-//        //Inicializa un objeto de la clase Inscripcion.
-//        Inscripcion inscripcionSacadora = new Inscripcion();
-//        
-//        //Extrae elemento de la lista del objeto
-//        //de la clase Alumno y lo asigna a otro objeto.
-//        //inscripcionSacadora = alumno_1.inscripcion_1.get(0);
-//        
-//        //Muestra un atributo del objeto copiado.
-//        System.out.println(inscripcionSacadora.getImporte());
-
         //NuevoDocente
         Docente docente_1 = new Docente();
         docente_1.setNombre("Damian");
@@ -60,6 +31,9 @@ public class Aula25v01{
         Docente docente_2 = new Docente();
         docente_2.setNombre("Pablo");
         docente_2.setApellido("Lopez");
+        docente_2.setDni(35668756);
+        docente_2.setTituloHabilitante("titulo");
+        docente_2.setHonorario(23);
         
         //NuevoCurso 
         Curso curso_2 = new Curso();
@@ -74,7 +48,7 @@ public class Aula25v01{
         Curso.cursos.add(curso_2);
         
         //JFrame
-        GestorRegistrarConsulta.IniciarAplicacion();
+        GestorRegistrarConsulta.iniciarAplicacion();
         
     }
     
