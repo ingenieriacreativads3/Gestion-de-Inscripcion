@@ -5,7 +5,7 @@ public class Aula25 extends javax.swing.JFrame {
     public Aula25() {
         
         initComponents();
-        this.setLocationRelativeTo(null);
+        //this.setLocationRelativeTo(null);
         
     }
 
