@@ -11,7 +11,7 @@ public class Pago{
     
     public Pago(){};
     
-    //Set
+    //SetSet
     
     public void setIdPago(int IdPagoAuxiliar){
         
