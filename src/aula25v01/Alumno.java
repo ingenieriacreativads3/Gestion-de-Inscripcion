@@ -150,9 +150,32 @@ public class Alumno{
         
     }
     
+    public static Alumno getAlumnoListaPorDni(int dniAuxiliar){
+        
+        Alumno alumnoAuxiliar = new Alumno();
+        alumnoAuxiliar.setDni(dniAuxiliar);
+        
+        if(Alumno.yaExisteAlumno(alumnoAuxiliar)){
+            
+            for(Alumno alumnoAuxiliar2 : listaAlumno){
+                
+                if(alumnoAuxiliar2.getDni() == dniAuxiliar){
+                    
+                    return alumnoAuxiliar2;
+                    
+                }
+                
+            }
+            
+        }
+        
+        return null;
+        
+    }
+    
     //Other
     
-    public boolean yaExisteAlumno(Alumno alumnoAuxiliar){
+    public static boolean yaExisteAlumno(Alumno alumnoAuxiliar){
         
         if(alumnoAuxiliar == null){return false;}
         if(listaAlumno.contains(alumnoAuxiliar)){return true;}

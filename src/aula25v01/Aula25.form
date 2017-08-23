@@ -70,6 +70,9 @@
       </AuxValues>
     </Component>
     <Component class="javax.swing.JButton" name="jButtonRegistrarAlumno">
+      <Events>
+        <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonRegistrarAlumnoMousePressed"/>
+      </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>

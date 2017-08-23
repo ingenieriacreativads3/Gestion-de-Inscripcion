@@ -16,7 +16,7 @@ public class GestorRegistrarConsulta {
     
     }
     
-    public static void gestionarRegistrarConsulta(){
+    public static void gestorJButtonRegistrarConsultaMousePressed(){
         
         RegistrarConsulta ventana_2 = new RegistrarConsulta(); 
         ventana_2.show();
@@ -28,22 +28,27 @@ public class GestorRegistrarConsulta {
  
     }
     
-    public static void gestionarRegistrarConsulta2
-        (String nombre,String apellido,String email,int telefono,int idCurso){
+    public static void gestorJButtonAceptarMousePressed
+        (String nombreAuxiliar, String apellidoAuxiliar,
+         String emailAuxiliar, int telefonoAuxiliar,
+         int IdCursoAuxiliar, int dniAuxiliar){
     
         //NuevoAlumno
         Alumno alumno_1 = new Alumno();
-        alumno_1.setNombre(nombre);
-        alumno_1.setApellido(apellido);
-        alumno_1.setEmail(email);
-        alumno_1.setTelefono(telefono); 
+        alumno_1.setDni(dniAuxiliar);
+        alumno_1.setNombre(nombreAuxiliar);
+        alumno_1.setApellido(apellidoAuxiliar);
+        alumno_1.setEmail(emailAuxiliar);
+        alumno_1.setTelefono(telefonoAuxiliar);
+        
+        Alumno.addListaAlumno(alumno_1);
 
         Curso cursoAuxiliar = new Curso();
-        cursoAuxiliar = pedirCursoALista(idCurso);
+        cursoAuxiliar = pedirCursoALista(IdCursoAuxiliar);
 
-        MostrarInformacion ventana_3 = new MostrarInformacion();
-        ventana_3.establecerTextoJTextArea(cursoAuxiliar.solicitarInformacion());
-        ventana_3.show();
+        MostrarInformacion ventanaMostrarInformacion = new MostrarInformacion();
+        ventanaMostrarInformacion.establecerTextoJTextArea(cursoAuxiliar.solicitarInformacion());
+        ventanaMostrarInformacion.show();
             
     }
         
@@ -65,7 +70,7 @@ public class GestorRegistrarConsulta {
     
     public static void gestionarJButtonCancelarMousePressed(Aula25 ventanaAuxiliar){
         
-        ventanaAuxiliar.dispose();
+        ventanaAuxiliar.hide();
         
     }
     

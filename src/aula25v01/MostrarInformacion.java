@@ -54,7 +54,7 @@ public class MostrarInformacion extends javax.swing.JFrame {
 
     private void jButtonAceptarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAceptarMousePressed
         
-        this.dispose();
+        this.hide();
         GestorRegistrarConsulta.iniciarAplicacion();
         
     }//GEN-LAST:event_jButtonAceptarMousePressed

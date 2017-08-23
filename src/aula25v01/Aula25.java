@@ -22,6 +22,12 @@ public class Aula25 extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
+        jButtonRegistrarAlumno.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButtonRegistrarAlumnoMousePressed(evt);
+            }
+        });
+
         jButtonRegistrarConsulta.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButtonRegistrarConsultaMousePressed(evt);
@@ -76,8 +82,8 @@ public class Aula25 extends javax.swing.JFrame {
 
     private void jButtonRegistrarConsultaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonRegistrarConsultaMousePressed
         
-        this.dispose();
-        GestorRegistrarConsulta.gestionarRegistrarConsulta();
+        this.hide();
+        GestorRegistrarConsulta.gestorJButtonRegistrarConsultaMousePressed();
         
     }//GEN-LAST:event_jButtonRegistrarConsultaMousePressed
 
@@ -86,6 +92,12 @@ public class Aula25 extends javax.swing.JFrame {
         GestorRegistrarConsulta.gestionarJButtonCancelarMousePressed(this);
         
     }//GEN-LAST:event_jButtonCancelarMousePressed
+
+    private void jButtonRegistrarAlumnoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonRegistrarAlumnoMousePressed
+        
+        GestorRegistrarInscripcion.gestorJButtonRegistrarAlumnoMousePressed();
+        
+    }//GEN-LAST:event_jButtonRegistrarAlumnoMousePressed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
