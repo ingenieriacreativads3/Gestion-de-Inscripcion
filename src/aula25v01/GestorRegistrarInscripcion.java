@@ -20,7 +20,7 @@ public class GestorRegistrarInscripcion{
         fInscripcionAlumno.jLabelTelefono.setText("Telefono");
         fInscripcionAlumno.jLabelDireccion.setText("Direccion");
         fInscripcionAlumno.jLabelFechaNac.setText("Fecha de Nacimiento");
-        fInscripcionAlumno.jTextFieldDni.setText(t);
+        
         
         
         System.out.println(Alumno.getListaAlumno().size());
