@@ -44,8 +44,8 @@ public class Aula25v01{
         curso_2.setDocente_1(docente_2);
         
         //AgregarCursosArrayList
-        Curso.cursos.add(curso_1);
-        Curso.cursos.add(curso_2);
+        Curso.addListaCurso(curso_1);
+        Curso.addListaCurso(curso_2);
         
         //JFrame
         GestorRegistrarConsulta.iniciarAplicacion();

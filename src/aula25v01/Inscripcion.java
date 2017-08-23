@@ -15,6 +15,8 @@ public class Inscripcion{
     private Alumno alumno_1;
     private Curso curso_1;
     
+    
+    
     public Inscripcion(){};
     
     //Set

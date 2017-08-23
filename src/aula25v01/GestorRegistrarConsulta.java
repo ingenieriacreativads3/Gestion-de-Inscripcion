@@ -1,5 +1,7 @@
 package aula25v01;
 
+import java.util.*;
+
 public class GestorRegistrarConsulta {
     
     public static void iniciarAplicacion(){
@@ -25,7 +27,7 @@ public class GestorRegistrarConsulta {
  
     }
     
-     public static void gestionarRegistrarConsulta2
+     protected static void gestionarRegistrarConsulta2
         (String nombre,String apellido,String email,int telefono,int idCurso){
     
         //NuevoAlumno
@@ -35,18 +37,29 @@ public class GestorRegistrarConsulta {
         alumno_1.setEmail(email);
         alumno_1.setTelefono(telefono); 
 
-        Curso curso_n = new Curso();
-        for(int i = 0 ; i < Curso.cursos.size();i++) {
-            if(Curso.cursos.get(i).getIdCurso() == idCurso) 
-            {
-            curso_n = Curso.cursos.get(i);
-            }
-        }
+        Curso cursoAuxiliar = new Curso();
+        cursoAuxiliar = pedirCursoALista(idCurso);
 
         MostrarInformacion ventana_3 = new MostrarInformacion();
-        ventana_3.establecerTextoJTextArea(curso_n.solicitarInformacion());
+        ventana_3.establecerTextoJTextArea(cursoAuxiliar.solicitarInformacion());
         ventana_3.show();
             
+    }
+        
+    private static Curso pedirCursoALista(int IdCursoAuxiliar){
+        
+        for(Curso cursoAuxiliar : Curso.getListaCurso()){
+            
+            if(cursoAuxiliar.getIdCurso() == IdCursoAuxiliar){
+                
+                return cursoAuxiliar;
+                
+            }
+            
+        }
+        
+        return null;
+        
     }
     
 }

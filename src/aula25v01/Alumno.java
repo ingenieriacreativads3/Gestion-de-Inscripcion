@@ -1,4 +1,5 @@
 package aula25v01;
+import com.sun.javafx.geom.transform.BaseTransform;
 import java.util.*;
 
 public class Alumno{
@@ -12,6 +13,8 @@ public class Alumno{
     private String email;
     private boolean estadoAlumno;   //true = activo, false  = inactivo
     private boolean prorrogaAlumno;
+    
+    private static Set<Alumno> listaAlumno = new HashSet<>();
     
     public Alumno(){};
     
@@ -71,6 +74,12 @@ public class Alumno{
         
     }
     
+    public void setListaAlumno(Set<Alumno> listaAlumnoAuxiliar){
+        
+        listaAlumno = listaAlumnoAuxiliar;
+        
+    }
+    
     //Get
     
     public String getNombre(){
@@ -127,19 +136,47 @@ public class Alumno{
         
     }
     
+    public static  Set<Alumno> getListaAlumno(){
+        
+        return listaAlumno;
+        
+    }
+    
     //Other
     
-    public boolean verificarExistencia(int dniAuxiliar){
+    public boolean yaExisteAlumno(Alumno alumnoAuxiliar){
         
-        if(dniAuxiliar == this.dni){
-            
-            return true;
-            
-        } else {
-            
-            return false;
-            
-        }
+        if(alumnoAuxiliar == null){return false;}
+        if(listaAlumno.contains(alumnoAuxiliar)){return true;}
+        return false;
+        
+    }
+    
+    @Override
+    public int hashCode(){
+        
+        return this.dni;
+        
+    }
+    
+    @Override
+    public boolean equals(Object objetoAuxiliar){
+        
+        if (objetoAuxiliar == null){return false;}
+        if (this.getClass() != objetoAuxiliar.getClass()){return false;}
+        
+        final Alumno alumnoAuxiliar = (Alumno) objetoAuxiliar;
+        
+        if (this.hashCode() != alumnoAuxiliar.hashCode()){return false;}
+        
+        return true;
+        
+    }
+    
+    @Override
+    public String toString(){
+        
+        return "";
         
     }
 }

@@ -9,6 +9,8 @@ public class Docente{
     private String tituloHabilitante;
     private float honorario;
     
+    private static Set<Docente> listaDocente = new HashSet<>();
+    
     public Docente(){};
     
     //Set
@@ -43,6 +45,12 @@ public class Docente{
         
     }
     
+    public static void setListaDocente(Set<Docente> listaDocenteAuxiliar){
+        
+        listaDocente = listaDocenteAuxiliar;
+        
+    }
+    
     //Get
     
     public String getNombre(){
@@ -72,6 +80,42 @@ public class Docente{
     public float getHonorario(){
         
         return this.honorario;
+        
+    }
+    
+    public static Set<Docente> getListaDocente(){
+        
+        return listaDocente;
+        
+    }
+    
+    //Others
+    
+    @Override
+    public int hashCode(){
+        
+        return this.dni;
+        
+    }
+    
+    @Override
+    public boolean equals(Object objetoAuxiliar){
+        
+        if (objetoAuxiliar == null){return false;}
+        if (this.getClass() != objetoAuxiliar.getClass()){return false;}
+        
+        final Docente docenteAuxiliar = (Docente) objetoAuxiliar;
+        
+        if (this.hashCode() != docenteAuxiliar.hashCode()){return false;}
+        
+        return true;
+        
+    }
+    
+    @Override
+    public String toString(){
+        
+        return "";
         
     }
     

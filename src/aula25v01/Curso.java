@@ -1,10 +1,9 @@
 package aula25v01;
+import com.sun.org.apache.xpath.internal.operations.Equals;
 import java.util.*;
 
 public class Curso{
     
-    static ArrayList <Curso> cursos = new ArrayList <Curso> ();
-
     private String nombre;
     private int IdCurso;
     private String descripcion;
@@ -13,17 +12,14 @@ public class Curso{
     private int cupoMax;
     private boolean enCuotas;
             //Verificar esto. Paga en cuotas o de contado creo.
-    private int diaInicio; //AAAAMMDD.
-    
+    private int diaInicio; //AAAAMMDD.    
     private Docente docente_1;
+    
+    private static Set<Curso> listaCurso = new HashSet<Curso> ();
     
     public Curso(){};
     
     //Set
-    
-    public static void setCursos(ArrayList<Curso> cursos) {
-        Curso.cursos = cursos;
-    }
     
     public void setNombre(String nombreAuxiliar){
         
@@ -134,18 +130,64 @@ public class Curso{
         return this.nombre;
         
     }
-      
-      public static ArrayList<Curso> getCursos() {
-        return cursos;
+    
+    //Manejo de Lista
+    
+     public static void setListaCurso(Set<Curso> listaCursoAuxiliar) {
+        
+        Curso.listaCurso = listaCursoAuxiliar;
+        
     }
     
-    public String solicitarInformacion()
-    {
+    
+    public static Set<Curso> getListaCurso() {
+        
+        return listaCurso;
+        
+    }
+    
+    public static void addListaCurso(Curso cursoAuxiliar){
+        
+        listaCurso.add(cursoAuxiliar);
+        
+    }
+    
+    //Others
+    
+    public String solicitarInformacion(){
+        
     return  "\nNombre: " + this.nombre + "\nDescripción: " + this.descripcion +
             "\nProfesor: " + this.docente_1.getNombre() +
             "\nCosto: " + this.costo;
+    
     }
     
-
-            
+    @Override
+    public int hashCode(){
+        
+        return this.IdCurso;
+        
+    }
+    
+    @Override
+    public boolean equals(Object objetoAuxiliar){
+        
+        if (objetoAuxiliar == null){return false;}
+        if (this.getClass() != objetoAuxiliar.getClass()){return false;}
+        
+        final Curso cursoAuxiliar = (Curso) objetoAuxiliar;
+        
+        if (this.hashCode() != cursoAuxiliar.hashCode()){return false;}
+        
+        return true;
+        
+    }
+    
+    @Override
+    public String toString(){
+        
+        return "";
+        
+    }
+    
 }

@@ -47,11 +47,6 @@ public class RegistrarConsulta extends javax.swing.JFrame {
                 jButtonAceptarMousePressed(evt);
             }
         });
-        jButtonAceptar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonAceptarActionPerformed(evt);
-            }
-        });
 
         jLabel5.setText("Curso de interes");
 
@@ -115,20 +110,13 @@ public class RegistrarConsulta extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButtonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAceptarActionPerformed
-        
-        
-        
-    }//GEN-LAST:event_jButtonAceptarActionPerformed
-
     private void jButtonAceptarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAceptarMousePressed
-    this.hide();    
-    GestorRegistrarConsulta.gestionarRegistrarConsulta2(jTextFieldNombre.getText(),jTextFieldApellido.getText(),jTextFieldEmail.getText(),Integer.parseInt(jTextFieldTelefono.getText()),jComboBoxCurso.getSelectedIndex());
+        
+        this.hide();    
+        GestorRegistrarConsulta.gestionarRegistrarConsulta2(jTextFieldNombre.getText(),jTextFieldApellido.getText(),jTextFieldEmail.getText(),Integer.parseInt(jTextFieldTelefono.getText()),jComboBoxCurso.getSelectedIndex());
+        
     }//GEN-LAST:event_jButtonAceptarMousePressed
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
