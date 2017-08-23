@@ -5,6 +5,7 @@ public class Aula25 extends javax.swing.JFrame {
     public Aula25() {
         
         initComponents();
+        this.jLabelAula25.setText("SAcar esto");
         this.setLocationRelativeTo(null);
         
     }
