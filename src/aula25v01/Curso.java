@@ -133,12 +133,11 @@ public class Curso{
     
     //Manejo de Lista
     
-     public static void setListaCurso(Set<Curso> listaCursoAuxiliar) {
+    public static void setListaCurso(Set<Curso> listaCursoAuxiliar) {
         
         Curso.listaCurso = listaCursoAuxiliar;
         
     }
-    
     
     public static Set<Curso> getListaCurso() {
         

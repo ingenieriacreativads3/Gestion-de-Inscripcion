@@ -9,6 +9,8 @@ public class Pago{
     
     private Inscripcion inscripcion_1;
     
+    private static Set<Pago> listaPago = new HashSet<>();
+    
     public Pago(){};
     
     //SetSet
@@ -60,6 +62,26 @@ public class Pago{
     public Inscripcion getInscripcion_1(){
         
         return this.inscripcion_1;
+        
+    }
+    
+    //Manejo de lista.
+    
+    public static void setListaPago(Set<Pago> listaPagoAuxiliar){
+        
+        listaPago = listaPagoAuxiliar;
+        
+    }
+    
+    public static Set<Pago> getListaPago(){
+        
+        return listaPago;
+        
+    }
+    
+    public static void addListaPago(Pago pagoAuxiliar){
+        
+        listaPago.add(pagoAuxiliar);
         
     }
     

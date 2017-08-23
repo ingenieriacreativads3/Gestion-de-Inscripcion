@@ -15,7 +15,7 @@ public class Inscripcion{
     private Alumno alumno_1;
     private Curso curso_1;
     
-    
+    private static Set<Inscripcion> listaInscripcion = new HashSet<>();
     
     public Inscripcion(){};
     
@@ -92,6 +92,26 @@ public class Inscripcion{
     public Curso getCurso_1(){
         
         return this.curso_1;
+        
+    }
+    
+    //Manejo de Lista.
+    
+    public static void setListaInscripcion(Set<Inscripcion> listaAuxiliar){
+        
+        listaInscripcion = listaAuxiliar;
+        
+    }
+    
+    public static Set<Inscripcion> getListaInscripcion(){
+        
+        return listaInscripcion;
+        
+    }
+    
+    public static void addListaInscripcion(Inscripcion inscripcionAuxiliar){
+        
+        listaInscripcion.add(inscripcionAuxiliar);
         
     }
     

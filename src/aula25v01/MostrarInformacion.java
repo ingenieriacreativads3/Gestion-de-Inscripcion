@@ -53,8 +53,10 @@ public class MostrarInformacion extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonAceptarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAceptarMousePressed
-        this.hide();
+        
+        this.dispose();
         GestorRegistrarConsulta.iniciarAplicacion();
+        
     }//GEN-LAST:event_jButtonAceptarMousePressed
 
     public static void main(String args[]) {

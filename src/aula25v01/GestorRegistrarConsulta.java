@@ -12,6 +12,7 @@ public class GestorRegistrarConsulta {
         ventana_1.jButtonIniciarSesion.setText("Iniciar sesión");
         ventana_1.jButtonRegistrarAlumno.setText("Registrarse");
         ventana_1.jButtonRegistrarConsulta.setText("Solicitar Información");
+        ventana_1.jButtonCancelar.setText("Cancelar");
     
     }
     
@@ -27,7 +28,7 @@ public class GestorRegistrarConsulta {
  
     }
     
-     protected static void gestionarRegistrarConsulta2
+    public static void gestionarRegistrarConsulta2
         (String nombre,String apellido,String email,int telefono,int idCurso){
     
         //NuevoAlumno
@@ -59,6 +60,12 @@ public class GestorRegistrarConsulta {
         }
         
         return null;
+        
+    }
+    
+    public static void gestionarJButtonCancelarMousePressed(Aula25 ventanaAuxiliar){
+        
+        ventanaAuxiliar.dispose();
         
     }
     

@@ -5,7 +5,7 @@ public class Docente{
     
     private String nombre;
     private String apellido;
-    private int dni;
+    private int dni;                    //Usamos esto como ID.
     private String tituloHabilitante;
     private float honorario;
     
@@ -42,12 +42,6 @@ public class Docente{
     public void setHonorario(float honorarioAuxiliar){
         
         this.honorario = honorarioAuxiliar;
-        
-    }
-    
-    public static void setListaDocente(Set<Docente> listaDocenteAuxiliar){
-        
-        listaDocente = listaDocenteAuxiliar;
         
     }
     
@@ -88,6 +82,13 @@ public class Docente{
         return listaDocente;
         
     }
+    
+    public static void setListaDocente(Set<Docente> listaDocenteAuxiliar){
+        
+        listaDocente = listaDocenteAuxiliar;
+        
+    }
+    
     
     //Others
     

@@ -6,7 +6,7 @@ public class Alumno{
     
     private String nombre;
     private String apellido;
-    private int dni;
+    private int dni;                //Usamos este atributo como ID
     private String domicilio;
     private int telefono;
     private int fechaNac;           //AAAAMMDD.
@@ -74,12 +74,6 @@ public class Alumno{
         
     }
     
-    public void setListaAlumno(Set<Alumno> listaAlumnoAuxiliar){
-        
-        listaAlumno = listaAlumnoAuxiliar;
-        
-    }
-    
     //Get
     
     public String getNombre(){
@@ -136,9 +130,23 @@ public class Alumno{
         
     }
     
+    //Manejo de Lista
+    
+    public void setListaAlumno(Set<Alumno> listaAlumnoAuxiliar){
+        
+        listaAlumno = listaAlumnoAuxiliar;
+        
+    }
+    
     public static  Set<Alumno> getListaAlumno(){
         
         return listaAlumno;
+        
+    }
+    
+    public static void addListaAlumno(Alumno alumnoAuxiliar){
+        
+        listaAlumno.add(alumnoAuxiliar);
         
     }
     

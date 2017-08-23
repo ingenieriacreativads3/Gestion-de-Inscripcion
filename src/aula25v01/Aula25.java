@@ -17,6 +17,7 @@ public class Aula25 extends javax.swing.JFrame {
         jButtonRegistrarAlumno = new javax.swing.JButton();
         jButtonRegistrarConsulta = new javax.swing.JButton();
         jLabelAula25 = new javax.swing.JLabel();
+        jButtonCancelar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -30,6 +31,12 @@ public class Aula25 extends javax.swing.JFrame {
         jLabelAula25.setFont(new java.awt.Font("Dialog", 3, 36)); // NOI18N
         jLabelAula25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
+        jButtonCancelar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButtonCancelarMousePressed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -40,8 +47,11 @@ public class Aula25 extends javax.swing.JFrame {
                     .addComponent(jLabelAula25, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonRegistrarAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonRegistrarConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonIniciarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(115, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jButtonIniciarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                        .addComponent(jButtonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -55,6 +65,10 @@ public class Aula25 extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jButtonIniciarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButtonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
@@ -62,10 +76,16 @@ public class Aula25 extends javax.swing.JFrame {
 
     private void jButtonRegistrarConsultaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonRegistrarConsultaMousePressed
         
-        this.hide();
+        this.dispose();
         GestorRegistrarConsulta.gestionarRegistrarConsulta();
         
     }//GEN-LAST:event_jButtonRegistrarConsultaMousePressed
+
+    private void jButtonCancelarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonCancelarMousePressed
+        
+        GestorRegistrarConsulta.gestionarJButtonCancelarMousePressed(this);
+        
+    }//GEN-LAST:event_jButtonCancelarMousePressed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -101,6 +121,7 @@ public class Aula25 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton jButtonCancelar;
     public javax.swing.JButton jButtonIniciarSesion;
     public javax.swing.JButton jButtonRegistrarAlumno;
     public javax.swing.JButton jButtonRegistrarConsulta;
