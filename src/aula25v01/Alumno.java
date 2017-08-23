@@ -1,5 +1,4 @@
 package aula25v01;
-import com.sun.javafx.geom.transform.BaseTransform;
 import java.util.*;
 
 public class Alumno{
@@ -203,11 +202,9 @@ public class Alumno{
         return true;
         
     }
+  
     
-    @Override
-    public String toString(){
         
-        return "";
-        
-    }
+    
+    
 }
