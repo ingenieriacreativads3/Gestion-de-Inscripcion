@@ -27,8 +27,7 @@ public class GestorRegistrarInscripcion{
 
     }
     
-    public static void gestorJButtonAceptarMousePressed(FInscripcionAlumnoExistente ventanaAuxiliar,int dniAlumnoAuxiliar)
-    {
+    public static void gestorJButtonAceptarMousePressed(FInscripcionAlumnoExistente ventanaAuxiliar,int dniAlumnoAuxiliar){
         
         Alumno alumnoAuxiliar = new Alumno();
         alumnoAuxiliar = pedirAlumnoALista(dniAlumnoAuxiliar);
@@ -39,27 +38,30 @@ public class GestorRegistrarInscripcion{
         ventanaAuxiliar.jTextFieldFechaNac.setVisible(true);
         ventanaAuxiliar.jButtonAceptar.setVisible(false);    
         
-    if(alumnoAuxiliar==null)
-    {
-        
-       ventanaAuxiliar.jLabelNombre.setText("Nombre");
-       ventanaAuxiliar.jLabelApellido.setText("Apellido");
-       ventanaAuxiliar.jLabelEmail.setText("E-Mail");
-       ventanaAuxiliar.jLabelTelefono.setText("Telefono");
-       ventanaAuxiliar.jTextFieldApellido.setVisible(true);
-       ventanaAuxiliar.jTextFieldNombre.setVisible(true);
-       ventanaAuxiliar.jTextFieldEmail.setVisible(true);
-       ventanaAuxiliar.jTextFieldTelefono.setVisible(true);
-       ventanaAuxiliar.jButtonAceptarAlumNoExistente.setVisible(true); 
-    }
-    else
-    {
-       ventanaAuxiliar.jButtonAceptarAlumExistente.setVisible(true); 
-    }
+        if(alumnoAuxiliar==null){
+
+           ventanaAuxiliar.jLabelNombre.setText("Nombre");
+           ventanaAuxiliar.jLabelApellido.setText("Apellido");
+           ventanaAuxiliar.jLabelEmail.setText("E-Mail");
+           ventanaAuxiliar.jLabelTelefono.setText("Telefono");
+           ventanaAuxiliar.jTextFieldApellido.setVisible(true);
+           ventanaAuxiliar.jTextFieldNombre.setVisible(true);
+           ventanaAuxiliar.jTextFieldEmail.setVisible(true);
+           ventanaAuxiliar.jTextFieldTelefono.setVisible(true);
+           ventanaAuxiliar.jButtonAceptarAlumNoExistente.setVisible(true); 
+
+        }else{
+
+           ventanaAuxiliar.jButtonAceptarAlumExistente.setVisible(true); 
+
+        }
     }
     
-    public static void gestorJButtonAceptarAlumExistenteMousePressed(FInscripcionAlumnoExistente ventanaAuxiliar,int dniAlumnoAuxiliar,String domicilioAuxiliar,int fechaNacAuxiliar)
-    {
+    public static void gestorJButtonAceptarAlumExistenteMousePressed
+        (FInscripcionAlumnoExistente ventanaAuxiliar,
+         int dniAlumnoAuxiliar, String domicilioAuxiliar,
+         int fechaNacAuxiliar){
+            
         ventanaAuxiliar.hide();
         Alumno alumnoAuxiliar = new Alumno();
         alumnoAuxiliar = pedirAlumnoALista(dniAlumnoAuxiliar);
@@ -77,8 +79,15 @@ public class GestorRegistrarInscripcion{
         
     }
     
-    public static void gestorJButtonAceptarAlumNoExistenteMousePressed(FInscripcionAlumnoExistente ventanaAuxiliar,int dniAuxiliar, int IdCursoAuxiliar, String nombreAuxiliar, String apellidoAuxiliar, String emailAuxiliar, int telefonoAuxiliar, String domicilioAuxiliar, int fechaNacAuxiliar)
-    {
+    public static void gestorJButtonAceptarAlumNoExistenteMousePressed
+        (FInscripcionAlumnoExistente ventanaAuxiliar){
+        
+        /*(FInscripcionAlumnoExistente ventanaAuxiliar,
+         int dniAuxiliar, int IdCursoAuxiliar, 
+         String nombreAuxiliar, String apellidoAuxiliar, 
+         String emailAuxiliar, int telefonoAuxiliar, 
+         String domicilioAuxiliar, int fechaNacAuxiliar){
+        
         Alumno alumno_1 = new Alumno();
 
         alumno_1.setDni(dniAuxiliar);
@@ -89,21 +98,32 @@ public class GestorRegistrarInscripcion{
         alumno_1.setDomicilio(domicilioAuxiliar);
         alumno_1.setFechaNac(fechaNacAuxiliar);
         alumno_1.setEstado(true);   
-        alumno_1.setProrroga(false);
+        alumno_1.setProrroga(false);*/
         
-        Alumno.addListaAlumno(alumno_1);
+        Alumno alumnoAuxiliar = new Alumno();
+        
+        alumnoAuxiliar.setDni(Integer.valueOf(ventanaAuxiliar.jTextFieldDni.getText()));
+        alumnoAuxiliar.setNombre(ventanaAuxiliar.jTextFieldNombre.getText());
+        alumnoAuxiliar.setApellido(ventanaAuxiliar.jTextFieldApellido.getText());
+        alumnoAuxiliar.setEmail(ventanaAuxiliar.jTextFieldEmail.getText());
+        alumnoAuxiliar.setTelefono(Integer.valueOf(ventanaAuxiliar.jTextFieldTelefono.getText()));
+        alumnoAuxiliar.setDomicilio(ventanaAuxiliar.jTextFieldDireccion.getText());
+        alumnoAuxiliar.setFechaNac(Integer.valueOf(ventanaAuxiliar.jTextFieldFechaNac.getText()));
+        alumnoAuxiliar.setEstado(true);
+        alumnoAuxiliar.setProrroga(false);
+        
+        
+        Alumno.addListaAlumno(alumnoAuxiliar);
        
         Curso cursoAuxiliar = new Curso();
-        cursoAuxiliar = pedirCursoALista(IdCursoAuxiliar);
-
-        Date fecha = new Date();
+        cursoAuxiliar = pedirCursoALista(ventanaAuxiliar.jComboBoxCurso.getSelectedIndex());
         
         Inscripcion inscripcion_1 = new Inscripcion();
-        inscripcion_1.setAlumno_1(alumno_1);
+        inscripcion_1.setAlumno_1(alumnoAuxiliar);
         inscripcion_1.setCurso_1(cursoAuxiliar);
         inscripcion_1.setEstado(1);
         inscripcion_1.setImporte(cursoAuxiliar.getCosto());
-        inscripcion_1.setFecha(fecha);
+        inscripcion_1.setFecha(new Date());
         
         Inscripcion.addListaInscripcion(inscripcion_1);
         

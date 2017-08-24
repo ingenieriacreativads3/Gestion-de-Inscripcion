@@ -3,6 +3,8 @@ import java.util.*;
 
 public class Inscripcion{
     
+    
+    
     private int IdInscripion;
     private Date fecha; 
     private double importe;

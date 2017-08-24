@@ -1,5 +1,7 @@
 package aula25v01;
 
+import java.util.*;
+
 public class FInscripcionAlumnoExistente extends javax.swing.JFrame{
     
     public FInscripcionAlumnoExistente(){
@@ -62,11 +64,6 @@ public class FInscripcionAlumnoExistente extends javax.swing.JFrame{
         jButtonAceptarAlumExistente.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButtonAceptarAlumExistenteMousePressed(evt);
-            }
-        });
-        jButtonAceptarAlumExistente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonAceptarAlumExistenteActionPerformed(evt);
             }
         });
 
@@ -164,11 +161,12 @@ public class FInscripcionAlumnoExistente extends javax.swing.JFrame{
                     .addComponent(jLabelFechaNac, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldFechaNac, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(38, 38, 38)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonAceptarAlumExistente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButtonAceptarAlumNoExistente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButtonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonAceptar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButtonAceptar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButtonAceptarAlumExistente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
 
@@ -176,36 +174,40 @@ public class FInscripcionAlumnoExistente extends javax.swing.JFrame{
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonAceptarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAceptarMousePressed
+        
         GestorRegistrarInscripcion.gestorJButtonAceptarMousePressed
                     (this, Integer.parseInt(jTextFieldDni.getText()));
                 
     }//GEN-LAST:event_jButtonAceptarMousePressed
 
     private void jButtonCancelarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonCancelarMousePressed
+        
         GestorRegistrarInscripcion.gestionarJButtonCancelarMousePressed(this);
+        
     }//GEN-LAST:event_jButtonCancelarMousePressed
 
-    private void jButtonAceptarAlumExistenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAceptarAlumExistenteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonAceptarAlumExistenteActionPerformed
-
     private void jButtonAceptarAlumExistenteMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAceptarAlumExistenteMousePressed
+        
         GestorRegistrarInscripcion.gestorJButtonAceptarAlumExistenteMousePressed
                 (this,Integer.parseInt(jTextFieldDni.getText()),
                  jTextFieldDireccion.getText(),
                  Integer.parseInt(jTextFieldFechaNac.getText()));
+        
     }//GEN-LAST:event_jButtonAceptarAlumExistenteMousePressed
 
     private void jButtonAceptarAlumNoExistenteMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAceptarAlumNoExistenteMousePressed
-        GestorRegistrarInscripcion.gestorJButtonAceptarAlumNoExistenteMousePressed
-                (this,Integer.parseInt(jTextFieldDni.getText()),
+        
+        GestorRegistrarInscripcion.gestorJButtonAceptarAlumNoExistenteMousePressed(this);
+                
+                /*(this,Integer.parseInt(jTextFieldDni.getText()),
                  jComboBoxCurso.getSelectedIndex(),
                  jTextFieldNombre.getText(),
                  jTextFieldApellido.getText(),
                  jTextFieldEmail.getText(),
                  Integer.parseInt(jTextFieldTelefono.getText()),
                  jTextFieldDireccion.getText(),
-                 Integer.parseInt(jTextFieldFechaNac.getText()));
+                 Integer.parseInt(jTextFieldFechaNac.getText()));*/
+        
     }//GEN-LAST:event_jButtonAceptarAlumNoExistenteMousePressed
 
     public static void main(String args[]){
