@@ -4,7 +4,7 @@ import java.util.*;
 public class Inscripcion{
     
     private int IdInscripion;
-    private int fecha; //La fecha se incia como sigue, AAAAMMDD.
+    private Date fecha; 
     private double importe;
     private int estado;
         //Los estados son:  0 = interesado;
@@ -27,7 +27,7 @@ public class Inscripcion{
         
     }
     
-    public void setFecha(int fechaAuxiliar){
+    public void setFecha(Date fechaAuxiliar){
         
         this.fecha = fechaAuxiliar;
         
@@ -65,7 +65,7 @@ public class Inscripcion{
         
     }
     
-    public int getFecha(){
+    public Date getFecha(){
         
         return this.fecha;
         
@@ -128,6 +128,27 @@ public class Inscripcion{
             return false;
             
         }
+    }
+    
+        @Override
+        public int hashCode(){
+        
+            return this.IdInscripion;
+               
+        }
+        
+        @Override
+        public boolean equals(Object objetoAuxiliar){
+        
+        if (objetoAuxiliar == null){return false;}
+        if (this.getClass() != objetoAuxiliar.getClass()){return false;}
+        
+        final Inscripcion inscripcionAuxiliar = (Inscripcion) objetoAuxiliar;
+        
+        if (this.hashCode() != inscripcionAuxiliar.hashCode()){return false;}
+        
+        return true;
+        
     }
     
 }

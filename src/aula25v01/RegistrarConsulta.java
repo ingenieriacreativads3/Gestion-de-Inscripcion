@@ -52,7 +52,7 @@ public class RegistrarConsulta extends javax.swing.JFrame {
 
         jLabel5.setText("Curso de interes");
 
-        jComboBoxCurso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Frances", "Programacion", " " }));
+        jComboBoxCurso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Frances", "Programacion", "" }));
 
         jLabelDni.setText("DNI");
 

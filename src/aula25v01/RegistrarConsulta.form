@@ -158,7 +158,7 @@
           <StringArray count="3">
             <StringItem index="0" value="Frances"/>
             <StringItem index="1" value="Programacion"/>
-            <StringItem index="2" value=" "/>
+            <StringItem index="2" value=""/>
           </StringArray>
         </Property>
       </Properties>

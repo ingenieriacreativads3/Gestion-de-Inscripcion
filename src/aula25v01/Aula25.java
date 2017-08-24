@@ -82,8 +82,7 @@ public class Aula25 extends javax.swing.JFrame {
 
     private void jButtonRegistrarConsultaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonRegistrarConsultaMousePressed
         
-        this.hide();
-        GestorRegistrarConsulta.gestorJButtonRegistrarConsultaMousePressed();
+        GestorRegistrarConsulta.gestorJButtonRegistrarConsultaMousePressed(this);
         
     }//GEN-LAST:event_jButtonRegistrarConsultaMousePressed
 

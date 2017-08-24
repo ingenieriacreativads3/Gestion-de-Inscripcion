@@ -16,8 +16,9 @@ public class GestorRegistrarConsulta {
     
     }
     
-    public static void gestorJButtonRegistrarConsultaMousePressed(){
+    public static void gestorJButtonRegistrarConsultaMousePressed(Aula25 ventanaAuxiliar){
         
+        ventanaAuxiliar.hide();
         RegistrarConsulta ventana_2 = new RegistrarConsulta(); 
         ventana_2.show();
         //Aca va el codigo que hace todo. Inizializa el alumno lo pone
@@ -42,14 +43,27 @@ public class GestorRegistrarConsulta {
         alumno_1.setTelefono(telefonoAuxiliar);
         
         Alumno.addListaAlumno(alumno_1);
-
+       
         Curso cursoAuxiliar = new Curso();
         cursoAuxiliar = pedirCursoALista(IdCursoAuxiliar);
 
+        
+        Date fecha = new Date();
+        System.out.println(fecha); 
+        
+        Inscripcion inscripcion_1 = new Inscripcion();
+        inscripcion_1.setAlumno_1(alumno_1);
+        inscripcion_1.setCurso_1(cursoAuxiliar);
+        inscripcion_1.setEstado(0);
+        inscripcion_1.setImporte(cursoAuxiliar.getCosto());
+        inscripcion_1.setFecha(fecha);
+        
+        Inscripcion.addListaInscripcion(inscripcion_1);
+        
         MostrarInformacion ventanaMostrarInformacion = new MostrarInformacion();
         ventanaMostrarInformacion.establecerTextoJTextArea(cursoAuxiliar.solicitarInformacion());
         ventanaMostrarInformacion.show();
-            
+           
     }
         
     private static Curso pedirCursoALista(int IdCursoAuxiliar){
@@ -70,8 +84,8 @@ public class GestorRegistrarConsulta {
     
     public static void gestionarJButtonCancelarMousePressed(Aula25 ventanaAuxiliar){
         
-        ventanaAuxiliar.hide();
-        
+        //ventanaAuxiliar.hide();
+        System.exit(0);
     }
     
 }
