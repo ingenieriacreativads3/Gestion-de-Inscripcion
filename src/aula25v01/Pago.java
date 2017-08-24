@@ -85,4 +85,34 @@ public class Pago{
         
     }
     
+    //Others
+    
+    @Override
+    public int hashCode(){
+        
+            return this.IdPago;
+               
+        }
+        
+    @Override
+    public boolean equals(Object objetoAuxiliar){
+        
+        if (objetoAuxiliar == null){return false;}
+        if (this.getClass() != objetoAuxiliar.getClass()){return false;}
+        
+        final Pago pagoAuxiliar = (Pago) objetoAuxiliar;
+        
+        if (this.hashCode() != pagoAuxiliar.hashCode()){return false;}
+        
+        return true;
+        
+    }
+    
+    @Override
+    public String toString(){
+        
+        return "";
+        
+    }
+    
 }

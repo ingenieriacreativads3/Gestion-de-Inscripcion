@@ -132,15 +132,15 @@ public class Inscripcion{
         }
     }
     
-        @Override
-        public int hashCode(){
+    @Override
+    public int hashCode(){
         
             return this.IdInscripion;
                
         }
         
-        @Override
-        public boolean equals(Object objetoAuxiliar){
+    @Override
+    public boolean equals(Object objetoAuxiliar){
         
         if (objetoAuxiliar == null){return false;}
         if (this.getClass() != objetoAuxiliar.getClass()){return false;}
@@ -150,6 +150,13 @@ public class Inscripcion{
         if (this.hashCode() != inscripcionAuxiliar.hashCode()){return false;}
         
         return true;
+        
+    }
+    
+    @Override
+    public String toString(){
+        
+        return "";
         
     }
     

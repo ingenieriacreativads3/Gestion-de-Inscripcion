@@ -203,7 +203,12 @@ public class Alumno{
         
     }
   
-    
+    @Override
+    public String toString(){
+        
+        return "";
+        
+    }
         
     
     

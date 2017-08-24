@@ -30,33 +30,38 @@ public class GestorRegistrarConsulta {
     }
     
     public static void gestorJButtonAceptarMousePressed
-        (String nombreAuxiliar, String apellidoAuxiliar,
+        (RegistrarConsulta ventanaAuxiliar){
+            
+        /*(String nombreAuxiliar, String apellidoAuxiliar,
          String emailAuxiliar, int telefonoAuxiliar,
-         int IdCursoAuxiliar, int dniAuxiliar){
+         int IdCursoAuxiliar, int dniAuxiliar){*/
     
-        //NuevoAlumno
+        /*//NuevoAlumno
         Alumno alumno_1 = new Alumno();
         alumno_1.setDni(dniAuxiliar);
         alumno_1.setNombre(nombreAuxiliar);
         alumno_1.setApellido(apellidoAuxiliar);
         alumno_1.setEmail(emailAuxiliar);
-        alumno_1.setTelefono(telefonoAuxiliar);
+        alumno_1.setTelefono(telefonoAuxiliar);*/
         
-        Alumno.addListaAlumno(alumno_1);
-       
+        Alumno alumnoAuxiliar = new Alumno();
+        alumnoAuxiliar.setDni(Integer.valueOf(ventanaAuxiliar.jTextFieldDni.getText()));
+        alumnoAuxiliar.setNombre(ventanaAuxiliar.jTextFieldNombre.getText());
+        alumnoAuxiliar.setApellido(ventanaAuxiliar.jTextFieldApellido.getText());
+        alumnoAuxiliar.setEmail(ventanaAuxiliar.jTextFieldEmail.getText());
+        alumnoAuxiliar.setTelefono(Integer.valueOf(ventanaAuxiliar.jTextFieldTelefono.getText()));
+        
+        Alumno.addListaAlumno(alumnoAuxiliar);
+        
         Curso cursoAuxiliar = new Curso();
-        cursoAuxiliar = pedirCursoALista(IdCursoAuxiliar);
-
-        
-        Date fecha = new Date();
-        System.out.println(fecha); 
+        cursoAuxiliar = pedirCursoALista(ventanaAuxiliar.jComboBoxCurso.getSelectedIndex());
         
         Inscripcion inscripcion_1 = new Inscripcion();
-        inscripcion_1.setAlumno_1(alumno_1);
+        inscripcion_1.setAlumno_1(alumnoAuxiliar);
         inscripcion_1.setCurso_1(cursoAuxiliar);
         inscripcion_1.setEstado(0);
         inscripcion_1.setImporte(cursoAuxiliar.getCosto());
-        inscripcion_1.setFecha(fecha);
+        inscripcion_1.setFecha(new Date());
         
         Inscripcion.addListaInscripcion(inscripcion_1);
         

@@ -121,14 +121,15 @@ public class RegistrarConsulta extends javax.swing.JFrame {
 
     private void jButtonAceptarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAceptarMousePressed
         
-        this.hide();
-        GestorRegistrarConsulta.gestorJButtonAceptarMousePressed
-                (jTextFieldNombre.getText(),
+        GestorRegistrarConsulta.gestorJButtonAceptarMousePressed(this);
+                
+        
+                /*(jTextFieldNombre.getText(),
                 jTextFieldApellido.getText(),
                 jTextFieldEmail.getText(),
                 Integer.parseInt(jTextFieldTelefono.getText()),
                 jComboBoxCurso.getSelectedIndex(),
-                Integer.parseInt(jTextFieldDni.getText()));
+                Integer.parseInt(jTextFieldDni.getText()));*/
         
     }//GEN-LAST:event_jButtonAceptarMousePressed
 
@@ -166,7 +167,7 @@ public class RegistrarConsulta extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonAceptar;
-    private javax.swing.JComboBox<String> jComboBoxCurso;
+    public javax.swing.JComboBox<String> jComboBoxCurso;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -175,10 +176,10 @@ public class RegistrarConsulta extends javax.swing.JFrame {
     public javax.swing.JLabel jLabelDni;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextFieldApellido;
+    public javax.swing.JTextField jTextFieldApellido;
     public javax.swing.JTextField jTextFieldDni;
-    private javax.swing.JTextField jTextFieldEmail;
-    private javax.swing.JTextField jTextFieldNombre;
-    private javax.swing.JTextField jTextFieldTelefono;
+    public javax.swing.JTextField jTextFieldEmail;
+    public javax.swing.JTextField jTextFieldNombre;
+    public javax.swing.JTextField jTextFieldTelefono;
     // End of variables declaration//GEN-END:variables
 }
