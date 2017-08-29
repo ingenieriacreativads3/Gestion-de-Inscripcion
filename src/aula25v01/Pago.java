@@ -85,6 +85,12 @@ public class Pago{
         
     }
     
+    public static int siguienteIdPago(){
+        
+        return listaPago.size() + 1;
+        
+    }
+    
     //Others
     
     @Override

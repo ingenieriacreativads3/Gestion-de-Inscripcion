@@ -172,6 +172,13 @@ public class Alumno{
         
     }
     
+    public static int siguienteIdAlumno(){
+        
+        int i = 1;
+        return listaAlumno.size() + i;
+        
+    }
+    
     //Other
     
     public static boolean yaExisteAlumno(Alumno alumnoAuxiliar){

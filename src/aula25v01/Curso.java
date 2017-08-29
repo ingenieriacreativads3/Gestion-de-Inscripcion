@@ -151,6 +151,12 @@ public class Curso{
         
     }
     
+    public static int siguienteIdCurso(){
+        
+        return listaCurso.size() + 1;
+        
+    }
+    
     //Others
     
     public String solicitarInformacion(){

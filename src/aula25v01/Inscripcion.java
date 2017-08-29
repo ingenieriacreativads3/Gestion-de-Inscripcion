@@ -117,6 +117,12 @@ public class Inscripcion{
         
     }
     
+    public static int siguienteIdInscripcion(){
+        
+        return listaInscripcion.size() + 1;
+        
+    }
+    
     //Other
     
     public boolean verificarEstado(int estadoAuxiliar){

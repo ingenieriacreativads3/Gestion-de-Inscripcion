@@ -77,6 +77,8 @@ public class Docente{
         
     }
     
+    //Manejo de lista.
+    
     public static Set<Docente> getListaDocente(){
         
         return listaDocente;
@@ -86,6 +88,12 @@ public class Docente{
     public static void setListaDocente(Set<Docente> listaDocenteAuxiliar){
         
         listaDocente = listaDocenteAuxiliar;
+        
+    }
+    
+    public static int siguienteIdDocente(){
+        
+        return listaDocente.size() + 1;
         
     }
     
