@@ -3,6 +3,9 @@ package aula25v01;
 import java.util.*;
 
 public class GestorRegistrarConsulta {
+
+    public GestorRegistrarConsulta(){
+    }
     
     public static void iniciarAplicacion(){
         

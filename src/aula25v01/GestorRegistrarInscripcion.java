@@ -3,6 +3,9 @@ package aula25v01;
 import java.util.*;
 
 public class GestorRegistrarInscripcion{
+
+    public GestorRegistrarInscripcion(){
+    }
             
     public static void gestorJButtonRegistrarAlumnoMousePressed(){
         

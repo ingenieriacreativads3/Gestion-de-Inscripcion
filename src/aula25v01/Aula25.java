@@ -22,6 +22,12 @@ public class Aula25 extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
+        jButtonIniciarSesion.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButtonIniciarSesionMousePressed(evt);
+            }
+        });
+
         jButtonRegistrarAlumno.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButtonRegistrarAlumnoMousePressed(evt);
@@ -98,6 +104,12 @@ public class Aula25 extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButtonRegistrarAlumnoMousePressed
 
+    private void jButtonIniciarSesionMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonIniciarSesionMousePressed
+        
+        GestorRegistrarListado.gestorJButtonIniciarSesionMousePressed(this);
+        
+    }//GEN-LAST:event_jButtonIniciarSesionMousePressed
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -109,7 +121,7 @@ public class Aula25 extends javax.swing.JFrame {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
-                }
+                            }
             }
         } catch (ClassNotFoundException ex) {
             java.util.logging.Logger.getLogger(Aula25.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
@@ -121,7 +133,6 @@ public class Aula25 extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Aula25.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
