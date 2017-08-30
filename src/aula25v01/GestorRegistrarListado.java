@@ -1,11 +1,12 @@
 package aula25v01;
 
+import java.awt.event.*;
 import java.util.*;
 
 public class GestorRegistrarListado{
     
-    private static String nombreAdmin = "admin";
-    private static int passAdmin = 445689;
+    private static String nombreAdmin = " ";
+    private static String passAdmin = " ";
 
     public GestorRegistrarListado(){
     }
@@ -21,6 +22,9 @@ public class GestorRegistrarListado{
         miIniciarSecion.jButtonAceptar.setText("Aceptar");
         miIniciarSecion.jButtonCancelar.setText("Cancelar");
         miIniciarSecion.setTitle("Inciar sesión");
+        miIniciarSecion.jTextFieldAlumno.setText("Usuario");
+        miIniciarSecion.jTextFieldContraseña.setText("Password");
+        miIniciarSecion.jTextFieldAlumno.selectAll();
         
     }
     
@@ -34,17 +38,25 @@ public class GestorRegistrarListado{
     public static void gestorJButtonAceptarMousePressed(FIniciarSecion v1){
         
         String nombreAuxiliar = v1.jLabelAlumno.getText();
-        int passAuxiliar = Integer.valueOf(v1.jLabelConstraseña.getText());
+        String passAuxiliar = v1.jTextFieldContraseña.getText();
         String morosos = "asd";
         
+        MostrarInformacion miMostrar = new MostrarInformacion();
+        miMostrar.show();
+        miMostrar.setTitle("Listado de Morosos");
+        miMostrar.jButtonAceptar.setText("Aceptar");
+        miMostrar.establecerTextoJTextArea(morosos);
+        v1.dispose();
+        
+        /*
         if(nombreAuxiliar == nombreAdmin){
             
             if(passAuxiliar == passAdmin){
                 
                 MostrarInformacion miMostrar = new MostrarInformacion();
                 miMostrar.show();
-                miMostrar.setTitle("Listado de Morosos");
-                miMostrar.jButtonAceptar.setText("Aceptar");
+                //miMostrar.setTitle("Listado de Morosos");
+                //miMostrar.jButtonAceptar.setText("Aceptar");
                 miMostrar.establecerTextoJTextArea(morosos);
                 v1.dispose();
                 
@@ -55,6 +67,7 @@ public class GestorRegistrarListado{
                 miMensaje.setTitle("Contraseña incorrecta");
                 miMensaje.jButtonAceptar.setText("Aceptar");
                 miMensaje.jLabelLinea1.setText("La contreseña ingresada es incorrecta.");
+                v1.dispose();
                 
             }
             
@@ -66,9 +79,12 @@ public class GestorRegistrarListado{
             miMensaje.jButtonAceptar.setText("Aceptar");
             miMensaje.jLabelLinea1.setText("El nombre ingresado no existe.");
             miMensaje.jLabelLinea2.setText("Ingresar un usuario habilitado.");
+            v1.dispose();
             
-        }
+        }*/
         
     }
+    
+    
     
 }

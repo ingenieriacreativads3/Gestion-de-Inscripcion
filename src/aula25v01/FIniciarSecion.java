@@ -1,5 +1,7 @@
-
 package aula25v01;
+
+import java.util.*;
+import java.awt.event.*;
 
 public class FIniciarSecion extends javax.swing.JFrame{
 
@@ -32,6 +34,11 @@ public class FIniciarSecion extends javax.swing.JFrame{
                 jButtonCancelarMousePressed(evt);
             }
         });
+        jButtonCancelar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jButtonCancelarKeyPressed(evt);
+            }
+        });
 
         jButtonAceptar.setFont(new java.awt.Font("Comic Sans MS", 2, 14)); // NOI18N
         jButtonAceptar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -39,10 +46,40 @@ public class FIniciarSecion extends javax.swing.JFrame{
                 jButtonAceptarMousePressed(evt);
             }
         });
+        jButtonAceptar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jButtonAceptarKeyPressed(evt);
+            }
+        });
 
         jTextFieldAlumno.setFont(new java.awt.Font("Comic Sans MS", 2, 14)); // NOI18N
+        jTextFieldAlumno.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jTextFieldAlumnoMousePressed(evt);
+            }
+        });
+        jTextFieldAlumno.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextFieldAlumnoKeyPressed(evt);
+            }
+        });
 
         jTextFieldContraseña.setFont(new java.awt.Font("Comic Sans MS", 2, 14)); // NOI18N
+        jTextFieldContraseña.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jTextFieldContraseñaFocusGained(evt);
+            }
+        });
+        jTextFieldContraseña.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jTextFieldContraseñaMousePressed(evt);
+            }
+        });
+        jTextFieldContraseña.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextFieldContraseñaKeyPressed(evt);
+            }
+        });
 
         jLabelTitulo.setFont(new java.awt.Font("Comic Sans MS", 2, 14)); // NOI18N
         jLabelTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -102,6 +139,74 @@ public class FIniciarSecion extends javax.swing.JFrame{
         GestorRegistrarListado.gestorJButtonAceptarMousePressed(this);
         
     }//GEN-LAST:event_jButtonAceptarMousePressed
+
+    private void jTextFieldAlumnoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldAlumnoKeyPressed
+        
+        if(evt.getKeyCode() == KeyEvent.VK_TAB){
+            
+            jTextFieldContraseña.requestFocus();
+            jTextFieldContraseña.selectAll();
+            
+        } 
+        
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+            
+            jTextFieldContraseña.requestFocus();
+            jTextFieldContraseña.selectAll();
+            
+        }      
+    }//GEN-LAST:event_jTextFieldAlumnoKeyPressed
+
+    private void jTextFieldContraseñaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldContraseñaKeyPressed
+        
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+            
+            jButtonAceptar.requestFocus();
+            
+        }
+        
+        if(evt.getKeyCode() == KeyEvent.VK_TAB){
+            
+            jButtonAceptar.requestFocus();
+            
+        }
+    }//GEN-LAST:event_jTextFieldContraseñaKeyPressed
+
+    private void jButtonAceptarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButtonAceptarKeyPressed
+        
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+            
+            GestorRegistrarListado.gestorJButtonAceptarMousePressed(this);
+            
+        }
+    }//GEN-LAST:event_jButtonAceptarKeyPressed
+
+    private void jButtonCancelarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButtonCancelarKeyPressed
+        
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+            
+            GestorRegistrarListado.gestorJButtonCancelarMousePressed(this);
+            
+        }
+    }//GEN-LAST:event_jButtonCancelarKeyPressed
+
+    private void jTextFieldAlumnoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextFieldAlumnoMousePressed
+        
+        jTextFieldAlumno.selectAll();
+        
+    }//GEN-LAST:event_jTextFieldAlumnoMousePressed
+
+    private void jTextFieldContraseñaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextFieldContraseñaMousePressed
+        
+        jTextFieldContraseña.selectAll();
+        
+    }//GEN-LAST:event_jTextFieldContraseñaMousePressed
+
+    private void jTextFieldContraseñaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldContraseñaFocusGained
+        
+        jTextFieldContraseña.selectAll();
+        
+    }//GEN-LAST:event_jTextFieldContraseñaFocusGained
 
     public static void main(String args[]){
         /* Set the Nimbus look and feel */

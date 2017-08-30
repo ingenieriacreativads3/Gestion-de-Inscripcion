@@ -1,5 +1,9 @@
 package aula25v01;
 
+import java.util.*;
+import java.awt.event.*;
+import javafx.scene.input.KeyCode;
+
 public class Aula25 extends javax.swing.JFrame {
 
     public Aula25() {
@@ -27,16 +31,31 @@ public class Aula25 extends javax.swing.JFrame {
                 jButtonIniciarSesionMousePressed(evt);
             }
         });
+        jButtonIniciarSesion.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jButtonIniciarSesionKeyPressed(evt);
+            }
+        });
 
         jButtonRegistrarAlumno.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButtonRegistrarAlumnoMousePressed(evt);
             }
         });
+        jButtonRegistrarAlumno.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jButtonRegistrarAlumnoKeyPressed(evt);
+            }
+        });
 
         jButtonRegistrarConsulta.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButtonRegistrarConsultaMousePressed(evt);
+            }
+        });
+        jButtonRegistrarConsulta.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jButtonRegistrarConsultaKeyPressed(evt);
             }
         });
 
@@ -46,6 +65,11 @@ public class Aula25 extends javax.swing.JFrame {
         jButtonCancelar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButtonCancelarMousePressed(evt);
+            }
+        });
+        jButtonCancelar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jButtonCancelarKeyPressed(evt);
             }
         });
 
@@ -109,6 +133,42 @@ public class Aula25 extends javax.swing.JFrame {
         GestorRegistrarListado.gestorJButtonIniciarSesionMousePressed(this);
         
     }//GEN-LAST:event_jButtonIniciarSesionMousePressed
+
+    private void jButtonRegistrarConsultaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButtonRegistrarConsultaKeyPressed
+        
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+            
+            GestorRegistrarConsulta.gestorJButtonRegistrarConsultaMousePressed(this);
+            
+        }
+    }//GEN-LAST:event_jButtonRegistrarConsultaKeyPressed
+
+    private void jButtonRegistrarAlumnoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButtonRegistrarAlumnoKeyPressed
+        
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+            
+            GestorRegistrarInscripcion.gestorJButtonRegistrarAlumnoMousePressed();
+            
+        }
+    }//GEN-LAST:event_jButtonRegistrarAlumnoKeyPressed
+
+    private void jButtonIniciarSesionKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButtonIniciarSesionKeyPressed
+        
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+            
+            GestorRegistrarListado.gestorJButtonIniciarSesionMousePressed(this);
+            
+        }
+    }//GEN-LAST:event_jButtonIniciarSesionKeyPressed
+
+    private void jButtonCancelarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButtonCancelarKeyPressed
+        
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+            
+            this.dispose();
+            
+        }
+    }//GEN-LAST:event_jButtonCancelarKeyPressed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
