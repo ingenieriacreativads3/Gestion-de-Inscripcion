@@ -11,7 +11,7 @@ public class GestorRegistrarConsulta {
         
         Aula25 ventana_1 = new Aula25();
         ventana_1.show();
-        ventana_1.jLabelAula25.setText("Aula 25");
+        ventana_1.jLabelTitulo.setText("Aula 25");
         ventana_1.jButtonIniciarSesion.setText("Iniciar sesión");
         ventana_1.jButtonRegistrarAlumno.setText("Registrarse");
         ventana_1.jButtonRegistrarConsulta.setText("Solicitar Información");
