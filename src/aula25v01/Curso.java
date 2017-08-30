@@ -157,6 +157,22 @@ public class Curso{
         
     }
     
+    public static Curso getCursoPorId(int IdCursoAuxiliar){
+        
+        for(Curso cursoAuxiliar : listaCurso){
+            
+            if(cursoAuxiliar.getIdCurso() == IdCursoAuxiliar){
+                
+                return cursoAuxiliar;
+                
+            }
+            
+        }
+        
+        return null;
+        
+    }
+    
     //Others
     
     public String solicitarInformacion(){

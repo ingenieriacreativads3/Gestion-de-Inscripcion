@@ -119,7 +119,7 @@ public class GestorRegistrarInscripcion{
         Alumno.addListaAlumno(alumnoAuxiliar);
        
         Curso cursoAuxiliar = new Curso();
-        cursoAuxiliar = pedirCursoALista(ventanaAuxiliar.jComboBoxCurso.getSelectedIndex());
+        cursoAuxiliar = Curso.getCursoPorId(ventanaAuxiliar.jComboBoxCurso.getSelectedIndex());
         
         Inscripcion inscripcion_1 = new Inscripcion();
         inscripcion_1.setAlumno_1(alumnoAuxiliar);
@@ -132,22 +132,7 @@ public class GestorRegistrarInscripcion{
         
         ventanaAuxiliar.hide();
  
-    }
-    
-    private static Curso pedirCursoALista(int IdCursoAuxiliar){
-        
-        for(Curso cursoAuxiliar : Curso.getListaCurso()){
-            
-            if(cursoAuxiliar.getIdCurso() == IdCursoAuxiliar){
-                
-                return cursoAuxiliar;
-                
-            }
-            
         }
-        
-        return null;
-    }
     
     private static Alumno pedirAlumnoALista(int dniAlumnoAuxiliar){
         

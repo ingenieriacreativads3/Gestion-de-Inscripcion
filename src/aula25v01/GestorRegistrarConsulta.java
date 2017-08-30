@@ -21,7 +21,7 @@ public class GestorRegistrarConsulta {
     
     public static void gestorJButtonRegistrarConsultaMousePressed(Aula25 ventanaAuxiliar){
         
-        ventanaAuxiliar.hide();
+        ventanaAuxiliar.dispose();
         RegistrarConsulta ventana_2 = new RegistrarConsulta(); 
         ventana_2.show();
         //Aca va el codigo que hace todo. Inizializa el alumno lo pone
@@ -34,18 +34,6 @@ public class GestorRegistrarConsulta {
     
     public static void gestorJButtonAceptarMousePressed
         (RegistrarConsulta ventanaAuxiliar){
-            
-        /*(String nombreAuxiliar, String apellidoAuxiliar,
-         String emailAuxiliar, int telefonoAuxiliar,
-         int IdCursoAuxiliar, int dniAuxiliar){*/
-    
-        /*//NuevoAlumno
-        Alumno alumno_1 = new Alumno();
-        alumno_1.setDni(dniAuxiliar);
-        alumno_1.setNombre(nombreAuxiliar);
-        alumno_1.setApellido(apellidoAuxiliar);
-        alumno_1.setEmail(emailAuxiliar);
-        alumno_1.setTelefono(telefonoAuxiliar);*/
         
         Alumno alumnoAuxiliar = new Alumno();
         alumnoAuxiliar.setDni(Integer.valueOf(ventanaAuxiliar.jTextFieldDni.getText()));
@@ -57,7 +45,8 @@ public class GestorRegistrarConsulta {
         Alumno.addListaAlumno(alumnoAuxiliar);
         
         Curso cursoAuxiliar = new Curso();
-        cursoAuxiliar = pedirCursoALista(ventanaAuxiliar.jComboBoxCurso.getSelectedIndex());
+        
+        cursoAuxiliar = Curso.getCursoPorId(ventanaAuxiliar.jComboBoxCurso.getSelectedIndex());
         
         Inscripcion inscripcion_1 = new Inscripcion();
         inscripcion_1.setAlumno_1(alumnoAuxiliar);
@@ -73,27 +62,12 @@ public class GestorRegistrarConsulta {
         ventanaMostrarInformacion.show();
            
     }
-        
-    private static Curso pedirCursoALista(int IdCursoAuxiliar){
-        
-        for(Curso cursoAuxiliar : Curso.getListaCurso()){
-            
-            if(cursoAuxiliar.getIdCurso() == IdCursoAuxiliar){
-                
-                return cursoAuxiliar;
-                
-            }
-            
-        }
-        
-        return null;
-        
-    }
     
     public static void gestionarJButtonCancelarMousePressed(Aula25 ventanaAuxiliar){
         
-        //ventanaAuxiliar.hide();
+        ventanaAuxiliar.dispose();
         System.exit(0);
+        
     }
     
 }
