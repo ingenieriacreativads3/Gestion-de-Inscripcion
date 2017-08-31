@@ -15,10 +15,10 @@ public class GestorRegistrarConsulta {
         ventana_1.jButtonIniciarSesion.setText("Iniciar sesión");
         ventana_1.jButtonRegistrarAlumno.setText("Registrarse");
         ventana_1.jButtonRegistrarConsulta.setText("Solicitar Información");
+        ventana_1.jButtonConfirmarPago.setText("Informar Pago");
         ventana_1.jButtonCancelarInscripcion.setText("Cancelar inscripcion");
         ventana_1.jButtonCancelar.setText("Cancelar");
         
-    
     }
     
     public static void gestorJButtonRegistrarConsultaMousePressed(Aula25 ventanaAuxiliar){
