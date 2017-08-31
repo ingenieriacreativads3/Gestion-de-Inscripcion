@@ -2,7 +2,7 @@ package aula25v01;
 
 import java.util.*;
 import java.awt.event.*;
-import javafx.scene.input.KeyCode;
+
 
 public class Aula25 extends javax.swing.JFrame {
 
@@ -23,6 +23,7 @@ public class Aula25 extends javax.swing.JFrame {
         jButtonCancelar = new javax.swing.JButton();
         jButtonConfirmarPago = new javax.swing.JButton();
         jLabelTitulo = new javax.swing.JLabel();
+        jButtonCancelarInscripcion = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -80,6 +81,17 @@ public class Aula25 extends javax.swing.JFrame {
         jLabelTitulo.setFont(new java.awt.Font("Dialog", 3, 36)); // NOI18N
         jLabelTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
+        jButtonCancelarInscripcion.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButtonCancelarInscripcionMousePressed(evt);
+            }
+        });
+        jButtonCancelarInscripcion.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jButtonCancelarInscripcionKeyPressed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -88,7 +100,9 @@ public class Aula25 extends javax.swing.JFrame {
                 .addGap(124, 124, 124)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButtonConfirmarPago, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButtonConfirmarPago, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonCancelarInscripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                         .addComponent(jButtonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
@@ -113,7 +127,9 @@ public class Aula25 extends javax.swing.JFrame {
                 .addComponent(jButtonIniciarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButtonConfirmarPago, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButtonCancelarInscripcion, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                .addContainerGap(64, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButtonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -137,7 +153,7 @@ public class Aula25 extends javax.swing.JFrame {
 
     private void jButtonRegistrarAlumnoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonRegistrarAlumnoMousePressed
         
-        GestorRegistrarInscripcion.gestorJButtonRegistrarAlumnoMousePressed();
+        GestorRegistrarInscripcion.gestorJButtonRegistrarAlumnoMousePressed(this);
         
     }//GEN-LAST:event_jButtonRegistrarAlumnoMousePressed
 
@@ -160,7 +176,7 @@ public class Aula25 extends javax.swing.JFrame {
         
         if(evt.getKeyCode() == KeyEvent.VK_ENTER){
             
-            GestorRegistrarInscripcion.gestorJButtonRegistrarAlumnoMousePressed();
+            GestorRegistrarInscripcion.gestorJButtonRegistrarAlumnoMousePressed(this);
             
         }
     }//GEN-LAST:event_jButtonRegistrarAlumnoKeyPressed
@@ -188,6 +204,18 @@ public class Aula25 extends javax.swing.JFrame {
         GestorConfirmarInscripcion.gestionarJButtonConfirmarPagoMousePressed(this);
         
     }//GEN-LAST:event_jButtonConfirmarPagoMousePressed
+
+    private void jButtonCancelarInscripcionMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonCancelarInscripcionMousePressed
+        GestorCancelarInscripcion.gestionarJButtonCancelarInscripcionMousePressed(this);
+    }//GEN-LAST:event_jButtonCancelarInscripcionMousePressed
+
+    private void jButtonCancelarInscripcionKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButtonCancelarInscripcionKeyPressed
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+            
+            GestorCancelarInscripcion.gestionarJButtonCancelarInscripcionMousePressed(this);
+            
+        }
+    }//GEN-LAST:event_jButtonCancelarInscripcionKeyPressed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -223,6 +251,7 @@ public class Aula25 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton jButtonCancelar;
+    public javax.swing.JButton jButtonCancelarInscripcion;
     private javax.swing.JButton jButtonConfirmarPago;
     public javax.swing.JButton jButtonIniciarSesion;
     public javax.swing.JButton jButtonRegistrarAlumno;

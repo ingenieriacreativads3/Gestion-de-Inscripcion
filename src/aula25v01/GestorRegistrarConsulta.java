@@ -15,7 +15,9 @@ public class GestorRegistrarConsulta {
         ventana_1.jButtonIniciarSesion.setText("Iniciar sesión");
         ventana_1.jButtonRegistrarAlumno.setText("Registrarse");
         ventana_1.jButtonRegistrarConsulta.setText("Solicitar Información");
+        ventana_1.jButtonCancelarInscripcion.setText("Cancelar inscripcion");
         ventana_1.jButtonCancelar.setText("Cancelar");
+        
     
     }
     
@@ -35,6 +37,7 @@ public class GestorRegistrarConsulta {
     public static void gestorJButtonAceptarMousePressed
         (RegistrarConsulta ventanaAuxiliar){
         
+        ventanaAuxiliar.dispose();
         Alumno alumnoAuxiliar = new Alumno();
         alumnoAuxiliar.setDni(Integer.valueOf(ventanaAuxiliar.jTextFieldDni.getText()));
         alumnoAuxiliar.setNombre(ventanaAuxiliar.jTextFieldNombre.getText());
@@ -50,7 +53,7 @@ public class GestorRegistrarConsulta {
         
         Inscripcion inscripcion_1 = new Inscripcion();
         inscripcion_1.setAlumno_1(alumnoAuxiliar);
-        inscripcion_1.setCurso_1(cursoAuxiliar);
+        //inscripcion_1.setCurso_1(cursoAuxiliar);
         inscripcion_1.setEstado(0);
         inscripcion_1.setImporte(cursoAuxiliar.getCosto());
         inscripcion_1.setFecha(new Date());
@@ -68,6 +71,12 @@ public class GestorRegistrarConsulta {
         ventanaAuxiliar.dispose();
         System.exit(0);
         
+    }
+    
+    public static void gestionarJButtonCancelarConsultaMousePressed(RegistrarConsulta ventanaAuxiliar){
+        
+        ventanaAuxiliar.dispose();
+        GestorRegistrarConsulta.iniciarAplicacion();
     }
     
 }

@@ -7,9 +7,9 @@ public class GestorRegistrarInscripcion{
     public GestorRegistrarInscripcion(){
     }
             
-    public static void gestorJButtonRegistrarAlumnoMousePressed(){
+    public static void gestorJButtonRegistrarAlumnoMousePressed(Aula25 v1){
         
-       
+        v1.dispose();
         FInscripcionAlumnoExistente fInscripcionAlumno = new FInscripcionAlumnoExistente();
         fInscripcionAlumno.show();
         fInscripcionAlumno.jLabelTitulo.setText("Bienvenido! Rellenar los campos para poder registrarse.");
@@ -65,7 +65,7 @@ public class GestorRegistrarInscripcion{
          int dniAlumnoAuxiliar, String domicilioAuxiliar,
          int fechaNacAuxiliar){
             
-        ventanaAuxiliar.hide();
+        ventanaAuxiliar.dispose();
         Alumno alumnoAuxiliar = new Alumno();
         alumnoAuxiliar = pedirAlumnoALista(dniAlumnoAuxiliar);
         
@@ -74,12 +74,23 @@ public class GestorRegistrarInscripcion{
         alumnoAuxiliar.setEstado(true);   
         alumnoAuxiliar.setProrroga(false);
         
+        Curso cursoAuxiliar = new Curso();
+        cursoAuxiliar = Curso.getCursoPorId(ventanaAuxiliar.jComboBoxCurso.getSelectedIndex());
+        
         Inscripcion inscripcionAuxiliar = new Inscripcion();
         inscripcionAuxiliar = pedirInscripcionALista(alumnoAuxiliar);
-        System.out.println(inscripcionAuxiliar.getFecha()); 
+        
+        //System.out.println(inscripcionAuxiliar.getFecha()); 
         
         inscripcionAuxiliar.setEstado(1);
+        inscripcionAuxiliar.setCurso_1(cursoAuxiliar);
         
+        Mensaje miMensaje = new Mensaje();
+        miMensaje.jButtonAceptar.setText("Aceptar");
+        miMensaje.show();
+        miMensaje.jLabelLinea1.setText("Se registro el Alumno");
+        miMensaje.jLabelLinea2.setText(alumnoAuxiliar.getNombre()+" "+alumnoAuxiliar.getApellido());
+        miMensaje.jLabelLinea3.setText("al curso de "+cursoAuxiliar.getNombre());
     }
     
     public static void gestorJButtonAceptarAlumNoExistenteMousePressed
@@ -130,8 +141,14 @@ public class GestorRegistrarInscripcion{
         
         Inscripcion.addListaInscripcion(inscripcion_1);
         
-        ventanaAuxiliar.hide();
- 
+        ventanaAuxiliar.dispose();
+        
+        Mensaje miMensaje = new Mensaje();
+        miMensaje.jButtonAceptar.setText("Aceptar");
+        miMensaje.show();
+        miMensaje.jLabelLinea1.setText("Se registro el Alumno");
+        miMensaje.jLabelLinea2.setText(alumnoAuxiliar.getNombre()+" "+alumnoAuxiliar.getApellido());
+        miMensaje.jLabelLinea3.setText("al curso de "+cursoAuxiliar.getNombre());
         }
     
     private static Alumno pedirAlumnoALista(int dniAlumnoAuxiliar){
@@ -167,8 +184,8 @@ public class GestorRegistrarInscripcion{
     
     public static void gestionarJButtonCancelarMousePressed(FInscripcionAlumnoExistente ventanaAuxiliar){
         
-        ventanaAuxiliar.hide();
-        
+        ventanaAuxiliar.dispose();
+        GestorRegistrarConsulta.iniciarAplicacion();
     }
     
 }

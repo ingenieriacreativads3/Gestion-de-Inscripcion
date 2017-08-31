@@ -93,8 +93,9 @@ public class Mensaje extends javax.swing.JFrame{
 
     private void jButtonAceptarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAceptarMousePressed
         
-        GestorRegistrarConsulta.iniciarAplicacion();
         this.dispose();
+        GestorRegistrarConsulta.iniciarAplicacion();
+        
         
     }//GEN-LAST:event_jButtonAceptarMousePressed
 
