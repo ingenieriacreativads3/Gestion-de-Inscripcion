@@ -15,11 +15,11 @@ public class FConfirmarInscripcion extends javax.swing.JFrame{
     private void initComponents() {
 
         jLabelTitulo = new javax.swing.JLabel();
-        jLabelDni = new javax.swing.JLabel();
+        jLabelAlumno = new javax.swing.JLabel();
         jLabelPass = new javax.swing.JLabel();
         jLabelLinea1 = new javax.swing.JLabel();
         jLabelCodigoConfirmacion = new javax.swing.JLabel();
-        jTextFieldDni = new javax.swing.JTextField();
+        jTextFieldAlumno = new javax.swing.JTextField();
         jPasswordFieldPass = new javax.swing.JPasswordField();
         jTextFieldCodigoConfirmacion = new javax.swing.JTextField();
         jButtonAceptar = new javax.swing.JButton();
@@ -31,7 +31,7 @@ public class FConfirmarInscripcion extends javax.swing.JFrame{
         jLabelTitulo.setFont(new java.awt.Font("Comic Sans MS", 2, 14)); // NOI18N
         jLabelTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
-        jLabelDni.setFont(new java.awt.Font("Comic Sans MS", 2, 14)); // NOI18N
+        jLabelAlumno.setFont(new java.awt.Font("Comic Sans MS", 2, 14)); // NOI18N
 
         jLabelPass.setFont(new java.awt.Font("Comic Sans MS", 2, 14)); // NOI18N
 
@@ -40,15 +40,15 @@ public class FConfirmarInscripcion extends javax.swing.JFrame{
 
         jLabelCodigoConfirmacion.setFont(new java.awt.Font("Comic Sans MS", 2, 14)); // NOI18N
 
-        jTextFieldDni.setFont(new java.awt.Font("Comic Sans MS", 2, 14)); // NOI18N
-        jTextFieldDni.addFocusListener(new java.awt.event.FocusAdapter() {
+        jTextFieldAlumno.setFont(new java.awt.Font("Comic Sans MS", 2, 14)); // NOI18N
+        jTextFieldAlumno.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                jTextFieldDniFocusGained(evt);
+                jTextFieldAlumnoFocusGained(evt);
             }
         });
-        jTextFieldDni.addKeyListener(new java.awt.event.KeyAdapter() {
+        jTextFieldAlumno.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextFieldDniKeyPressed(evt);
+                jTextFieldAlumnoKeyPressed(evt);
             }
         });
 
@@ -118,11 +118,11 @@ public class FConfirmarInscripcion extends javax.swing.JFrame{
                             .addComponent(jTextFieldCodigoConfirmacion, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabelDni, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelPass, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextFieldDni, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldAlumno, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jPasswordFieldPass, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jLabelLinea1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
@@ -136,8 +136,8 @@ public class FConfirmarInscripcion extends javax.swing.JFrame{
                 .addComponent(jLabelLinea1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelDni, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldDni, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelPass, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -156,11 +156,11 @@ public class FConfirmarInscripcion extends javax.swing.JFrame{
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextFieldDniFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDniFocusGained
+    private void jTextFieldAlumnoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldAlumnoFocusGained
         
-        jTextFieldDni.selectAll();
+        jTextFieldAlumno.selectAll();
         
-    }//GEN-LAST:event_jTextFieldDniFocusGained
+    }//GEN-LAST:event_jTextFieldAlumnoFocusGained
 
     private void jPasswordFieldPassFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jPasswordFieldPassFocusGained
         
@@ -174,7 +174,7 @@ public class FConfirmarInscripcion extends javax.swing.JFrame{
         
     }//GEN-LAST:event_jTextFieldCodigoConfirmacionFocusGained
 
-    private void jTextFieldDniKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldDniKeyPressed
+    private void jTextFieldAlumnoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldAlumnoKeyPressed
         
         if(evt.getKeyCode() == KeyEvent.VK_ENTER){
             
@@ -182,7 +182,7 @@ public class FConfirmarInscripcion extends javax.swing.JFrame{
             
         }
         
-    }//GEN-LAST:event_jTextFieldDniKeyPressed
+    }//GEN-LAST:event_jTextFieldAlumnoKeyPressed
 
     private void jPasswordFieldPassKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordFieldPassKeyPressed
         
@@ -266,13 +266,13 @@ public class FConfirmarInscripcion extends javax.swing.JFrame{
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton jButtonAceptar;
     public javax.swing.JButton jButtonCancelar;
+    public javax.swing.JLabel jLabelAlumno;
     public javax.swing.JLabel jLabelCodigoConfirmacion;
-    public javax.swing.JLabel jLabelDni;
     public javax.swing.JLabel jLabelLinea1;
     public javax.swing.JLabel jLabelPass;
     public javax.swing.JLabel jLabelTitulo;
     public javax.swing.JPasswordField jPasswordFieldPass;
+    public javax.swing.JTextField jTextFieldAlumno;
     public javax.swing.JTextField jTextFieldCodigoConfirmacion;
-    public javax.swing.JTextField jTextFieldDni;
     // End of variables declaration//GEN-END:variables
 }

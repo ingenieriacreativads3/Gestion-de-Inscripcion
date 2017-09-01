@@ -43,12 +43,12 @@
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabelDni" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                          <Component id="jLabelAlumno" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
                           <Component id="jLabelPass" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jTextFieldDni" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
+                          <Component id="jTextFieldAlumno" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
                           <Component id="jPasswordFieldPass" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -67,8 +67,8 @@
               <Component id="jLabelLinea1" min="-2" pref="30" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabelDni" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                  <Component id="jTextFieldDni" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="jLabelAlumno" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="jTextFieldAlumno" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -102,7 +102,7 @@
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabelDni">
+    <Component class="javax.swing.JLabel" name="jLabelAlumno">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Comic Sans MS" size="14" style="2"/>
@@ -143,15 +143,15 @@
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextFieldDni">
+    <Component class="javax.swing.JTextField" name="jTextFieldAlumno">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Comic Sans MS" size="14" style="2"/>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jTextFieldDniFocusGained"/>
-        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextFieldDniKeyPressed"/>
+        <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jTextFieldAlumnoFocusGained"/>
+        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextFieldAlumnoKeyPressed"/>
       </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>

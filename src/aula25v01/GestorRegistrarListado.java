@@ -18,12 +18,12 @@ public class GestorRegistrarListado{
         miIniciarSecion.show();
         miIniciarSecion.jLabelTitulo.setText("Iniciar sesión");
         miIniciarSecion.jLabelAlumno.setText("Alumno");
-        miIniciarSecion.jLabelConstraseña.setText("Contraseña");
+        miIniciarSecion.jLabelPass.setText("Contraseña");
         miIniciarSecion.jButtonAceptar.setText("Aceptar");
         miIniciarSecion.jButtonCancelar.setText("Cancelar");
         miIniciarSecion.setTitle("Inciar sesión");
         miIniciarSecion.jTextFieldAlumno.setText("Usuario");
-        miIniciarSecion.jTextFieldContraseña.setText("Password");
+        miIniciarSecion.jTextFieldPass.setText("Password");
         miIniciarSecion.jTextFieldAlumno.selectAll();
         
     }
@@ -38,7 +38,7 @@ public class GestorRegistrarListado{
     public static void gestorJButtonAceptarMousePressed(FIniciarSecion v1){
         
         String nombreAuxiliar = v1.jLabelAlumno.getText();
-        String passAuxiliar = v1.jTextFieldContraseña.getText();
+        String passAuxiliar = v1.jTextFieldPass.getText();
         String morosos = "asd";
         
         MostrarInformacion miMostrar = new MostrarInformacion();

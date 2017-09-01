@@ -5,21 +5,20 @@ public class GestorConfirmarInscripcion{
     public GestorConfirmarInscripcion(){
     }
     
-    public static void gestionarJButtonConfirmarPagoMousePressed(Aula25 v1){
+    public static void gestionarJButtonConfirmarPago(Aula25 v1){
         
         FConfirmarInscripcion miFConfirmar = new FConfirmarInscripcion();
         miFConfirmar.show();
-        miFConfirmar.setTitle("Confirmacion de Pago");
-        miFConfirmar.jLabelTitulo.setText("Informe de pago.");
-        miFConfirmar.jLabelLinea1.setText("En 24 horas se habiliará la plataforma.");
+        miFConfirmar.jLabelTitulo.setText("Resgistraremos tu confirmación de pago.");
+        miFConfirmar.jLabelLinea1.setText("En 24 horas habilitaremos tu plataforma.");
+        miFConfirmar.jLabelAlumno.setText("Alumno");
+        miFConfirmar.jLabelPass.setText("Contraseña");
+        miFConfirmar.jLabelCodigoConfirmacion.setText("Codigo de confirmación");
+        miFConfirmar.jTextFieldAlumno.setText("Ingresa tu usuario");
+        miFConfirmar.jTextFieldCodigoConfirmacion.setText("Ingresa tu codigo");
         miFConfirmar.jButtonAceptar.setText("Aceptar");
         miFConfirmar.jButtonCancelar.setText("Cancelar");
-        miFConfirmar.jLabelDni.setText("Usuario");
-        miFConfirmar.jLabelPass.setText("Contraseña");
-        miFConfirmar.jLabelCodigoConfirmacion.setText("Código confirmacion");
-        miFConfirmar.jTextFieldDni.setText("Ingresar usuario");
-        miFConfirmar.jPasswordFieldPass.setText("Ingresar contraseña");
-        miFConfirmar.jTextFieldCodigoConfirmacion.setText("Ingresar código");
+        
         v1.dispose();
         
     }
@@ -34,7 +33,7 @@ public class GestorConfirmarInscripcion{
     public static void gestionarJButtonAceptar(FConfirmarInscripcion v1){
         
         String pass = String.valueOf(v1.jPasswordFieldPass.getPassword());
-        int dniAuxi = Integer.valueOf(v1.jTextFieldDni.getText());
+        int usuarioAuxi = Integer.valueOf(v1.jTextFieldAlumno.getText());
         int codigoAuxi = Integer.valueOf(v1.jTextFieldCodigoConfirmacion.getText());
         
         Mensaje miMensaje = new Mensaje();

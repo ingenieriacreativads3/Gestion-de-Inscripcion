@@ -15,18 +15,21 @@ public class FIniciarSecion extends javax.swing.JFrame{
     private void initComponents() {
 
         jLabelAlumno = new javax.swing.JLabel();
-        jLabelConstraseña = new javax.swing.JLabel();
+        jLabelPass = new javax.swing.JLabel();
+        jLabelTitulo = new javax.swing.JLabel();
         jButtonCancelar = new javax.swing.JButton();
         jButtonAceptar = new javax.swing.JButton();
         jTextFieldAlumno = new javax.swing.JTextField();
-        jTextFieldContraseña = new javax.swing.JTextField();
-        jLabelTitulo = new javax.swing.JLabel();
+        jTextFieldPass = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabelAlumno.setFont(new java.awt.Font("Comic Sans MS", 2, 14)); // NOI18N
 
-        jLabelConstraseña.setFont(new java.awt.Font("Comic Sans MS", 2, 14)); // NOI18N
+        jLabelPass.setFont(new java.awt.Font("Comic Sans MS", 2, 14)); // NOI18N
+
+        jLabelTitulo.setFont(new java.awt.Font("Comic Sans MS", 2, 14)); // NOI18N
+        jLabelTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         jButtonCancelar.setFont(new java.awt.Font("Comic Sans MS", 2, 14)); // NOI18N
         jButtonCancelar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -53,6 +56,11 @@ public class FIniciarSecion extends javax.swing.JFrame{
         });
 
         jTextFieldAlumno.setFont(new java.awt.Font("Comic Sans MS", 2, 14)); // NOI18N
+        jTextFieldAlumno.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jTextFieldAlumnoFocusGained(evt);
+            }
+        });
         jTextFieldAlumno.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jTextFieldAlumnoMousePressed(evt);
@@ -64,25 +72,22 @@ public class FIniciarSecion extends javax.swing.JFrame{
             }
         });
 
-        jTextFieldContraseña.setFont(new java.awt.Font("Comic Sans MS", 2, 14)); // NOI18N
-        jTextFieldContraseña.addFocusListener(new java.awt.event.FocusAdapter() {
+        jTextFieldPass.setFont(new java.awt.Font("Comic Sans MS", 2, 14)); // NOI18N
+        jTextFieldPass.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                jTextFieldContraseñaFocusGained(evt);
+                jTextFieldPassFocusGained(evt);
             }
         });
-        jTextFieldContraseña.addMouseListener(new java.awt.event.MouseAdapter() {
+        jTextFieldPass.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jTextFieldContraseñaMousePressed(evt);
+                jTextFieldPassMousePressed(evt);
             }
         });
-        jTextFieldContraseña.addKeyListener(new java.awt.event.KeyAdapter() {
+        jTextFieldPass.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextFieldContraseñaKeyPressed(evt);
+                jTextFieldPassKeyPressed(evt);
             }
         });
-
-        jLabelTitulo.setFont(new java.awt.Font("Comic Sans MS", 2, 14)); // NOI18N
-        jLabelTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -93,10 +98,10 @@ public class FIniciarSecion extends javax.swing.JFrame{
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButtonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelConstraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelPass, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextFieldContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldPass, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonAceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(36, Short.MAX_VALUE))
@@ -116,13 +121,13 @@ public class FIniciarSecion extends javax.swing.JFrame{
                     .addComponent(jTextFieldAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelConstraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelPass, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldPass, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(22, 22, 22)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButtonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonAceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         pack();
@@ -144,20 +149,20 @@ public class FIniciarSecion extends javax.swing.JFrame{
         
         if(evt.getKeyCode() == KeyEvent.VK_TAB){
             
-            jTextFieldContraseña.requestFocus();
-            jTextFieldContraseña.selectAll();
+            jTextFieldPass.requestFocus();
+            jTextFieldPass.selectAll();
             
         } 
         
         if(evt.getKeyCode() == KeyEvent.VK_ENTER){
             
-            jTextFieldContraseña.requestFocus();
-            jTextFieldContraseña.selectAll();
+            jTextFieldPass.requestFocus();
+            jTextFieldPass.selectAll();
             
         }      
     }//GEN-LAST:event_jTextFieldAlumnoKeyPressed
 
-    private void jTextFieldContraseñaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldContraseñaKeyPressed
+    private void jTextFieldPassKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldPassKeyPressed
         
         if(evt.getKeyCode() == KeyEvent.VK_ENTER){
             
@@ -170,7 +175,7 @@ public class FIniciarSecion extends javax.swing.JFrame{
             jButtonAceptar.requestFocus();
             
         }
-    }//GEN-LAST:event_jTextFieldContraseñaKeyPressed
+    }//GEN-LAST:event_jTextFieldPassKeyPressed
 
     private void jButtonAceptarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButtonAceptarKeyPressed
         
@@ -196,17 +201,23 @@ public class FIniciarSecion extends javax.swing.JFrame{
         
     }//GEN-LAST:event_jTextFieldAlumnoMousePressed
 
-    private void jTextFieldContraseñaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextFieldContraseñaMousePressed
+    private void jTextFieldPassMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextFieldPassMousePressed
         
-        jTextFieldContraseña.selectAll();
+        jTextFieldPass.selectAll();
         
-    }//GEN-LAST:event_jTextFieldContraseñaMousePressed
+    }//GEN-LAST:event_jTextFieldPassMousePressed
 
-    private void jTextFieldContraseñaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldContraseñaFocusGained
+    private void jTextFieldPassFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldPassFocusGained
         
-        jTextFieldContraseña.selectAll();
+        jTextFieldPass.selectAll();
         
-    }//GEN-LAST:event_jTextFieldContraseñaFocusGained
+    }//GEN-LAST:event_jTextFieldPassFocusGained
+
+    private void jTextFieldAlumnoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldAlumnoFocusGained
+        
+        jTextFieldAlumno.selectAll();
+        
+    }//GEN-LAST:event_jTextFieldAlumnoFocusGained
 
     public static void main(String args[]){
         /* Set the Nimbus look and feel */
@@ -244,9 +255,9 @@ public class FIniciarSecion extends javax.swing.JFrame{
     public javax.swing.JButton jButtonAceptar;
     public javax.swing.JButton jButtonCancelar;
     public javax.swing.JLabel jLabelAlumno;
-    public javax.swing.JLabel jLabelConstraseña;
+    public javax.swing.JLabel jLabelPass;
     public javax.swing.JLabel jLabelTitulo;
     public javax.swing.JTextField jTextFieldAlumno;
-    public javax.swing.JTextField jTextFieldContraseña;
+    public javax.swing.JTextField jTextFieldPass;
     // End of variables declaration//GEN-END:variables
 }

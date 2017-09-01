@@ -82,6 +82,11 @@ public class Aula25 extends javax.swing.JFrame {
                 jButtonConfirmarPagoMousePressed(evt);
             }
         });
+        jButtonConfirmarPago.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jButtonConfirmarPagoKeyPressed(evt);
+            }
+        });
 
         jButtonCancelarInscripcion.setFont(new java.awt.Font("Comic Sans MS", 2, 14)); // NOI18N
         jButtonCancelarInscripcion.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -202,7 +207,7 @@ public class Aula25 extends javax.swing.JFrame {
 
     private void jButtonConfirmarPagoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConfirmarPagoMousePressed
         
-        GestorConfirmarInscripcion.gestionarJButtonConfirmarPagoMousePressed(this);
+        GestorConfirmarInscripcion.gestionarJButtonConfirmarPago(this);
         
     }//GEN-LAST:event_jButtonConfirmarPagoMousePressed
 
@@ -217,6 +222,15 @@ public class Aula25 extends javax.swing.JFrame {
             
         }
     }//GEN-LAST:event_jButtonCancelarInscripcionKeyPressed
+
+    private void jButtonConfirmarPagoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButtonConfirmarPagoKeyPressed
+        
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+            
+            GestorConfirmarInscripcion.gestionarJButtonConfirmarPago(this);
+            
+        }
+    }//GEN-LAST:event_jButtonConfirmarPagoKeyPressed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
