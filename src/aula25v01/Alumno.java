@@ -1,7 +1,8 @@
 package aula25v01;
+import java.io.Serializable;
 import java.util.*;
 
-public class Alumno{
+public class Alumno implements Serializable{
     
     private String nombre;
     private String apellido;
@@ -216,7 +217,5 @@ public class Alumno{
         return "";
         
     }
-        
-    
     
 }
