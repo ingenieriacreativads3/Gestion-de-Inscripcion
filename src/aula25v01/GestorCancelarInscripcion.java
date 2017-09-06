@@ -1,16 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package aula25v01;
 
 import java.util.*;
+import java.awt.event.*;
 
-/**
- *
- * @author Gabriel
- */
 public class GestorCancelarInscripcion 
 {
     public static void gestionarJButtonCancelarInscripcionMousePressed(Aula25 v1){
@@ -102,7 +94,8 @@ public class GestorCancelarInscripcion
         else
         {
             ventanaAuxiliar.dispose();
-            Mensaje miMensaje = new Mensaje();
+            Status miStatus = new Status();
+            Mensaje miMensaje = new Mensaje(miStatus);
             miMensaje.show();
             miMensaje.jButtonAceptar.setText("Aceptar");
             miMensaje.jLabelLinea1.setText("El alumno no existe");

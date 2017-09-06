@@ -50,6 +50,7 @@ public class Aula25v01{
         //JFrame
         GestorRegistrarConsulta.iniciarAplicacion();
         
+        
     }
     
 }

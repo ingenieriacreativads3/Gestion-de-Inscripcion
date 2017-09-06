@@ -23,19 +23,35 @@ public class GestorRegistrarConsulta {
     
     public static void gestorJButtonRegistrarConsultaMousePressed(Aula25 ventanaAuxiliar){
         
+        RegistrarConsulta miConsulta = new RegistrarConsulta(); 
+        miConsulta.show();
+        miConsulta.setTitle("Solicitud de Información de Curso");
+        miConsulta.jLabelCurso.setText("Curso de Interés");
+        miConsulta.jLabelNombre.setText("Nombre");
+        miConsulta.jLabelApellido.setText("Apellido");
+        miConsulta.jLabelDni.setText("DNI");
+        miConsulta.jLabelEMail.setText("E-Mail");
+        miConsulta.jLabelTelefono.setText("Telefono");
+        
+        miConsulta.jComboBoxCurso.addItem("Seleccionar curso");
+        
+        for(Curso cursoAuxiliar : Curso.getListaCurso()){
+            
+            miConsulta.jComboBoxCurso.addItem(cursoAuxiliar.getNombre());
+            
+        }
+        
+        miConsulta.jTextFieldNombre.setText("Ingresar nombre");
+        miConsulta.jTextFieldApellido.setText("Ingresar apellido");
+        miConsulta.jTextFieldDni.setText("Ingresar DNI");
+        miConsulta.jTextFieldEmail.setText("Ingresar E-Mail");
+        miConsulta.jTextFieldTelefono.setText("Ingresar teléfono");
+        
         ventanaAuxiliar.dispose();
-        RegistrarConsulta ventana_2 = new RegistrarConsulta(); 
-        ventana_2.show();
-        //Aca va el codigo que hace todo. Inizializa el alumno lo pone
-        //En la lista estática.
-        //Tmb desde aca se inizializa la pantalla que muestra la informacion.
-        //Aca se pide la informacion del docente vinculado al curso.
-        //y se muestra.
  
     }
     
-    public static void gestorJButtonAceptarMousePressed
-        (RegistrarConsulta ventanaAuxiliar){
+    public static void gestorJButtonAceptarMousePressed(RegistrarConsulta ventanaAuxiliar){
         
         ventanaAuxiliar.dispose();
         Alumno alumnoAuxiliar = new Alumno();

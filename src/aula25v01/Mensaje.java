@@ -4,11 +4,16 @@ import java.util.*;
 import java.awt.event.*;
 
 public class Mensaje extends javax.swing.JFrame{
+    
+    private final Status miStatus;
 
-    public Mensaje(){
+    public Mensaje(Status statusAuxiliar){
         initComponents();
         this.setLocationRelativeTo(null);
+        this.miStatus = statusAuxiliar;
     }
+    
+    public 
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
