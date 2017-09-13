@@ -5,7 +5,7 @@ import java.awt.event.*;
 
 public class Mensaje extends javax.swing.JFrame{
     
-    private final Status miStatus;
+    public final Status miStatus;
 
     public Mensaje(Status statusAuxiliar){
         initComponents();
@@ -13,7 +13,7 @@ public class Mensaje extends javax.swing.JFrame{
         this.miStatus = statusAuxiliar;
     }
     
-    public 
+    
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -131,7 +131,7 @@ public class Mensaje extends javax.swing.JFrame{
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable(){
             public void run(){
-                new Mensaje().setVisible(true);
+                new Mensaje(Status.getEstadoInicial()).setVisible(true);
             }
         });
     }

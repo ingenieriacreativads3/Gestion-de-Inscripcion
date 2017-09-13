@@ -62,15 +62,15 @@ public class GestorCancelarInscripcion
                        ins.setEstado(3);
                     ventanaAuxiliar.dispose();
                     //System.out.println(ins.getEstado());
-                    Mensaje miMensaje = new Mensaje();
-                    miMensaje.jButtonAceptar.setText("Aceptar");
+                    Mensaje miMensaje = new Mensaje(Status.getEstadoInicial());
                     miMensaje.show();
+                    miMensaje.jButtonAceptar.setText("Aceptar");
                     miMensaje.jLabelLinea1.setText("El estado de la inscripcion paso a ser cancelado"); 
                     }
                     else
                     {
                     ventanaAuxiliar.dispose();
-                    Mensaje miMensaje = new Mensaje();
+                    Mensaje miMensaje = new Mensaje(Status.getEstadoInicial());
                     miMensaje.jButtonAceptar.setText("Aceptar");
                     miMensaje.show();
                     miMensaje.jLabelLinea1.setText("La inscripcion ya fue cancelada");
@@ -80,7 +80,7 @@ public class GestorCancelarInscripcion
                 {
                 //Si te equivocas de curso
                   ventanaAuxiliar.dispose();
-                  Mensaje miMensaje = new Mensaje();
+                  Mensaje miMensaje = new Mensaje(Status.getEstadoInicial());
                   miMensaje.jButtonAceptar.setText("Aceptar");
                   miMensaje.show();
                   miMensaje.jLabelLinea1.setText("El alumno no esta inscripto al curso seleccionado");               
@@ -94,8 +94,7 @@ public class GestorCancelarInscripcion
         else
         {
             ventanaAuxiliar.dispose();
-            Status miStatus = new Status();
-            Mensaje miMensaje = new Mensaje(miStatus);
+            Mensaje miMensaje = new Mensaje(Status.getEstadoInicial());
             miMensaje.show();
             miMensaje.jButtonAceptar.setText("Aceptar");
             miMensaje.jLabelLinea1.setText("El alumno no existe");

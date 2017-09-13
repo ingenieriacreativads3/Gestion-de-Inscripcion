@@ -2,7 +2,7 @@ package aula25v01;
 import java.io.Serializable;
 import java.util.*;
 
-public class Alumno implements Serializable{
+public class Alumno implements Serializable, MiState{
     
     private String nombre;
     private String apellido;
@@ -13,6 +13,7 @@ public class Alumno implements Serializable{
     private String email;
     private boolean estadoAlumno;   //true = activo, false  = inactivo
     private boolean prorrogaAlumno;
+    private Status miStatus;
     
     private static Set<Alumno> listaAlumno = new HashSet<>();
     
@@ -215,6 +216,13 @@ public class Alumno implements Serializable{
     public String toString(){
         
         return "";
+        
+    }
+    
+    @Override
+    public Status getStatusActual(){
+        
+        return this.miStatus;
         
     }
     

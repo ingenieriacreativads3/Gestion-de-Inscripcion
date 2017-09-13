@@ -36,7 +36,7 @@ public class GestorConfirmarInscripcion{
         int usuarioAuxi = Integer.valueOf(v1.jTextFieldAlumno.getText());
         int codigoAuxi = Integer.valueOf(v1.jTextFieldCodigoConfirmacion.getText());
         
-        Mensaje miMensaje = new Mensaje();
+        Mensaje miMensaje = new Mensaje(Status.getEstadoInicial());
         miMensaje.show();
         miMensaje.setTitle("Informe de Pago Recibido");
         miMensaje.jButtonAceptar.setText("Aceptar");

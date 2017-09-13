@@ -2,7 +2,7 @@ package aula25v01;
 import com.sun.org.apache.xpath.internal.operations.Equals;
 import java.util.*;
 
-public class Curso{
+public class Curso implements MiState{
     
     private String nombre;
     private int IdCurso;
@@ -14,6 +14,7 @@ public class Curso{
             //Verificar esto. Paga en cuotas o de contado creo.
     private int diaInicio; //AAAAMMDD.    
     private Docente docente_1;
+    private Status miStatus;
     
     private static Set<Curso> listaCurso = new HashSet<Curso> ();
     
@@ -209,6 +210,13 @@ public class Curso{
         
         return "";
         
+    }
+
+    @Override
+    public Status getStatusActual(){
+        
+        return this.miStatus;
+
     }
     
 }

@@ -85,7 +85,7 @@ public class GestorRegistrarInscripcion{
         inscripcionAuxiliar.setEstado(1);
         inscripcionAuxiliar.setCurso_1(cursoAuxiliar);
         
-        Mensaje miMensaje = new Mensaje();
+        Mensaje miMensaje = new Mensaje(Status.getEstadoInicial());
         miMensaje.jButtonAceptar.setText("Aceptar");
         miMensaje.show();
         miMensaje.jLabelLinea1.setText("Se registro el Alumno");
@@ -143,7 +143,7 @@ public class GestorRegistrarInscripcion{
         
         ventanaAuxiliar.dispose();
         
-        Mensaje miMensaje = new Mensaje();
+        Mensaje miMensaje = new Mensaje(Status.getEstadoInicial());
         miMensaje.jButtonAceptar.setText("Aceptar");
         miMensaje.show();
         miMensaje.jLabelLinea1.setText("Se registro el Alumno");

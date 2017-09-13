@@ -249,7 +249,7 @@ public class RegistrarConsulta extends javax.swing.JFrame {
         
         if((evt.getKeyCode() <= KeyEvent.VK_A) && (evt.getKeyCode() >= KeyEvent.VK_Z)){
             
-            Mensaje miMensaje = new Mensaje();
+            Mensaje miMensaje = new Mensaje(Status.getEstadoError001());
             miMensaje.setTitle("Error de ingreso");
             miMensaje.jButtonAceptar.setText("Aceptar");
             miMensaje.jLabelLinea1.setText("El carácter ingresado no es válido.");

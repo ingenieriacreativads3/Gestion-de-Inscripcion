@@ -49,6 +49,8 @@ public class Aula25v01{
         
         //JFrame
         GestorRegistrarConsulta.iniciarAplicacion();
+        Status miStatusInicializar = new Status(999, "Estado inicializar");
+        miStatusInicializar.incializarStatus();
         
         
     }
