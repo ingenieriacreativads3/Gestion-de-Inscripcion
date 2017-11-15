@@ -14,7 +14,7 @@ public class Aula25v01{
         docente_1.setDni(32546743);
         docente_1.setTituloHabilitante("...");
         docente_1.setHonorario(200);
-        System.out.println("askjdlaksdj");
+        
         
         //NuevoCurso 
         Curso curso_1 = new Curso();

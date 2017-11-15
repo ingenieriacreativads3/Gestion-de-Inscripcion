@@ -165,7 +165,7 @@ public class Aula25 extends javax.swing.JFrame {
 
     private void jButtonIniciarSesionMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonIniciarSesionMousePressed
         
-        GestorRegistrarListado.gestorJButtonIniciarSesionMousePressed(this);
+        GestorIniciarSecion.gestorJButtonIniciarSesionMousePressed(this);
         
     }//GEN-LAST:event_jButtonIniciarSesionMousePressed
 
@@ -191,7 +191,7 @@ public class Aula25 extends javax.swing.JFrame {
         
         if(evt.getKeyCode() == KeyEvent.VK_ENTER){
             
-            GestorRegistrarListado.gestorJButtonIniciarSesionMousePressed(this);
+            GestorIniciarSecion.gestorJButtonIniciarSesionMousePressed(this);
             
         }
     }//GEN-LAST:event_jButtonIniciarSesionKeyPressed

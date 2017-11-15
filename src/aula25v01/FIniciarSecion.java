@@ -18,9 +18,10 @@ public class FIniciarSecion extends javax.swing.JFrame{
         jLabelPass = new javax.swing.JLabel();
         jLabelTitulo = new javax.swing.JLabel();
         jButtonCancelar = new javax.swing.JButton();
-        jButtonAceptar = new javax.swing.JButton();
+        jButtonMorosos = new javax.swing.JButton();
         jTextFieldAlumno = new javax.swing.JTextField();
         jTextFieldPass = new javax.swing.JTextField();
+        jButtonSetCurso = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -43,15 +44,15 @@ public class FIniciarSecion extends javax.swing.JFrame{
             }
         });
 
-        jButtonAceptar.setFont(new java.awt.Font("Comic Sans MS", 2, 14)); // NOI18N
-        jButtonAceptar.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButtonMorosos.setFont(new java.awt.Font("Comic Sans MS", 2, 14)); // NOI18N
+        jButtonMorosos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jButtonAceptarMousePressed(evt);
+                jButtonMorososMousePressed(evt);
             }
         });
-        jButtonAceptar.addKeyListener(new java.awt.event.KeyAdapter() {
+        jButtonMorosos.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                jButtonAceptarKeyPressed(evt);
+                jButtonMorososKeyPressed(evt);
             }
         });
 
@@ -89,26 +90,34 @@ public class FIniciarSecion extends javax.swing.JFrame{
             }
         });
 
+        jButtonSetCurso.setFont(new java.awt.Font("Comic Sans MS", 2, 14)); // NOI18N
+        jButtonSetCurso.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButtonSetCursoMousePressed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
                 .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButtonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelPass, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButtonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldPass, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonAceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButtonMorosos, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonSetCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(36, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabelTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -123,11 +132,13 @@ public class FIniciarSecion extends javax.swing.JFrame{
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelPass, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldPass, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(22, 22, 22)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButtonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonAceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jButtonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButtonSetCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButtonMorosos, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -135,15 +146,15 @@ public class FIniciarSecion extends javax.swing.JFrame{
 
     private void jButtonCancelarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonCancelarMousePressed
         
-        GestorRegistrarListado.gestorJButtonCancelarMousePressed(this);
+        GestorIniciarSecion.gestorJButtonCancelarMousePressed(this);
         
     }//GEN-LAST:event_jButtonCancelarMousePressed
 
-    private void jButtonAceptarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAceptarMousePressed
+    private void jButtonMorososMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMorososMousePressed
         
-        GestorRegistrarListado.gestorJButtonAceptarMousePressed(this);
+        GestorIniciarSecion.gestorjButtonMorososMousePressed(this);
         
-    }//GEN-LAST:event_jButtonAceptarMousePressed
+    }//GEN-LAST:event_jButtonMorososMousePressed
 
     private void jTextFieldAlumnoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldAlumnoKeyPressed
         
@@ -166,31 +177,31 @@ public class FIniciarSecion extends javax.swing.JFrame{
         
         if(evt.getKeyCode() == KeyEvent.VK_ENTER){
             
-            jButtonAceptar.requestFocus();
+            jButtonMorosos.requestFocus();
             
         }
         
         if(evt.getKeyCode() == KeyEvent.VK_TAB){
             
-            jButtonAceptar.requestFocus();
+            jButtonMorosos.requestFocus();
             
         }
     }//GEN-LAST:event_jTextFieldPassKeyPressed
 
-    private void jButtonAceptarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButtonAceptarKeyPressed
+    private void jButtonMorososKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButtonMorososKeyPressed
         
         if(evt.getKeyCode() == KeyEvent.VK_ENTER){
             
-            GestorRegistrarListado.gestorJButtonAceptarMousePressed(this);
+            GestorIniciarSecion.gestorjButtonMorososMousePressed(this);
             
         }
-    }//GEN-LAST:event_jButtonAceptarKeyPressed
+    }//GEN-LAST:event_jButtonMorososKeyPressed
 
     private void jButtonCancelarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButtonCancelarKeyPressed
         
         if(evt.getKeyCode() == KeyEvent.VK_ENTER){
             
-            GestorRegistrarListado.gestorJButtonCancelarMousePressed(this);
+            GestorIniciarSecion.gestorJButtonCancelarMousePressed(this);
             
         }
     }//GEN-LAST:event_jButtonCancelarKeyPressed
@@ -218,6 +229,13 @@ public class FIniciarSecion extends javax.swing.JFrame{
         jTextFieldAlumno.selectAll();
         
     }//GEN-LAST:event_jTextFieldAlumnoFocusGained
+
+    private void jButtonSetCursoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonSetCursoMousePressed
+        
+        GestorSetCurso.gestorJButtonSetCursoMousePressed();
+        this.dispose();
+        
+    }//GEN-LAST:event_jButtonSetCursoMousePressed
 
     public static void main(String args[]){
         /* Set the Nimbus look and feel */
@@ -252,8 +270,9 @@ public class FIniciarSecion extends javax.swing.JFrame{
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton jButtonAceptar;
     public javax.swing.JButton jButtonCancelar;
+    public javax.swing.JButton jButtonMorosos;
+    public javax.swing.JButton jButtonSetCurso;
     public javax.swing.JLabel jLabelAlumno;
     public javax.swing.JLabel jLabelPass;
     public javax.swing.JLabel jLabelTitulo;

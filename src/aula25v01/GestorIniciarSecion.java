@@ -3,12 +3,12 @@ package aula25v01;
 import java.awt.event.*;
 import java.util.*;
 
-public class GestorRegistrarListado{
+public class GestorIniciarSecion{
     
     private static String nombreAdmin = " ";
     private static String passAdmin = " ";
 
-    public GestorRegistrarListado(){
+    public GestorIniciarSecion(){
     }
     
     public static void gestorJButtonIniciarSesionMousePressed(Aula25 v1){
@@ -19,7 +19,8 @@ public class GestorRegistrarListado{
         miIniciarSecion.jLabelTitulo.setText("Iniciar sesión");
         miIniciarSecion.jLabelAlumno.setText("Alumno");
         miIniciarSecion.jLabelPass.setText("Contraseña");
-        miIniciarSecion.jButtonAceptar.setText("Aceptar");
+        miIniciarSecion.jButtonMorosos.setText("Lista de Morosos");
+        miIniciarSecion.jButtonSetCurso.setText("Agregar curso");
         miIniciarSecion.jButtonCancelar.setText("Cancelar");
         miIniciarSecion.setTitle("Inciar sesión");
         miIniciarSecion.jTextFieldAlumno.setText("Usuario");
@@ -35,7 +36,7 @@ public class GestorRegistrarListado{
         
     }
     
-    public static void gestorJButtonAceptarMousePressed(FIniciarSecion v1){
+    public static void gestorjButtonMorososMousePressed(FIniciarSecion v1){
         
         String nombreAuxiliar = v1.jLabelAlumno.getText();
         String passAuxiliar = v1.jTextFieldPass.getText();

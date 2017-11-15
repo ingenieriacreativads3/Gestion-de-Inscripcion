@@ -18,7 +18,11 @@ public class Curso implements MiState{
     
     private static Set<Curso> listaCurso = new HashSet<Curso> ();
     
-    public Curso(){};
+    public Curso(){
+        
+        addListaCurso(this);
+        
+    };
     
     //Set
     

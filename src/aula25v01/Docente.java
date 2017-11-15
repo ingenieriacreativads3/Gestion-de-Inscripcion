@@ -11,7 +11,11 @@ public class Docente{
     
     private static Set<Docente> listaDocente = new HashSet<>();
     
-    public Docente(){};
+    public Docente(){
+        
+        addDocente(this);
+        
+    };
     
     //Set
     
@@ -97,6 +101,14 @@ public class Docente{
         
     }
     
+    private static void addDocente(Docente actual){
+        
+        listaDocente.add(actual);
+        
+    }
+    
+    
+    
     
     //Others
     
@@ -124,7 +136,7 @@ public class Docente{
     @Override
     public String toString(){
         
-        return "";
+        return this.nombre + " " + this.apellido;
         
     }
     
