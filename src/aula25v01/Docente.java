@@ -5,7 +5,8 @@ public class Docente{
     
     private String nombre;
     private String apellido;
-    private int dni;                    //Usamos esto como ID.
+    private int id;
+    private int dni;                    
     private String tituloHabilitante;
     private float honorario;
     
@@ -13,7 +14,9 @@ public class Docente{
     
     public Docente(){
         
+        this.id = getSiguienteIdDocente();
         addDocente(this);
+        
         
     };
     
@@ -95,7 +98,7 @@ public class Docente{
         
     }
     
-    public static int siguienteIdDocente(){
+    private static int getSiguienteIdDocente(){
         
         return listaDocente.size() + 1;
         
@@ -107,6 +110,22 @@ public class Docente{
         
     }
     
+    public static Docente getDocentePorId(int dniActual){
+        
+        for(Docente docenteActual : listaDocente){
+            
+            if(docenteActual.getDni() == dniActual){
+                
+                return docenteActual;
+                
+            }
+            
+        }
+        
+        return null;
+        
+    }
+    
     
     
     
@@ -115,7 +134,7 @@ public class Docente{
     @Override
     public int hashCode(){
         
-        return this.dni;
+        return this.id;
         
     }
     

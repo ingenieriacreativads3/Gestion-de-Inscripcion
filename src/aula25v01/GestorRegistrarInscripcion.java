@@ -33,9 +33,10 @@ public class GestorRegistrarInscripcion{
             
         }
         
-        System.out.println(Curso.getListaCurso().spliterator());
+        //TODO borrar esto
+        //System.out.println(Curso.getListaCurso().size());
         
-
+        //TODO borrar esto
         //System.out.println(Alumno.getListaAlumno().size());
 
     }

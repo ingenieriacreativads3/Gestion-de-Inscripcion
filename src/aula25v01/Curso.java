@@ -19,6 +19,9 @@ public class Curso implements MiState{
     
     public Curso(){
         
+        
+        System.out.println(12.5);
+        this.IdCurso = siguienteIdCurso();
         addListaCurso(this);
         
     };
@@ -151,11 +154,12 @@ public class Curso implements MiState{
     
     public static void addListaCurso(Curso cursoAuxiliar){
         
+        System.out.println(12.6);
         listaCurso.add(cursoAuxiliar);
         
     }
     
-    public static int siguienteIdCurso(){
+    private static int siguienteIdCurso(){
         
         return listaCurso.size() + 1;
         

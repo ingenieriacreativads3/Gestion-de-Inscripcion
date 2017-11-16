@@ -50,6 +50,11 @@ public class FSetCurso extends javax.swing.JFrame{
                 jButtonAceptarMousePressed(evt);
             }
         });
+        jButtonAceptar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jButtonAceptarKeyPressed(evt);
+            }
+        });
 
         jButtonCancelar.setFont(new java.awt.Font("Comic Sans MS", 2, 14)); // NOI18N
         jButtonCancelar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -184,9 +189,19 @@ public class FSetCurso extends javax.swing.JFrame{
 
     private void jButtonAceptarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAceptarMousePressed
         
-        
+        boolean a = GestorSetCurso.gestorJButtonAceptarMousePressed(this);
         
     }//GEN-LAST:event_jButtonAceptarMousePressed
+
+    private void jButtonAceptarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButtonAceptarKeyPressed
+        
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+            
+            boolean a = GestorSetCurso.gestorJButtonAceptarMousePressed(this);
+            
+        }
+        
+    }//GEN-LAST:event_jButtonAceptarKeyPressed
 
     public static void main(String args[]){
         /* Set the Nimbus look and feel */

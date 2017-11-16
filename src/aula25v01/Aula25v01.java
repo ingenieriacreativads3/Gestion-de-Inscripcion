@@ -19,7 +19,6 @@ public class Aula25v01{
         //NuevoCurso 
         Curso curso_1 = new Curso();
         curso_1.setNombre("Frances");
-        curso_1.setIdCurso(0);
         curso_1.setDescripcion("...");
         curso_1.setCosto(1500);
         curso_1.setCupoMin(10);
@@ -36,13 +35,15 @@ public class Aula25v01{
         docente_2.setTituloHabilitante("titulo");
         docente_2.setHonorario(23);
         
+        
         //NuevoCurso 
         Curso curso_2 = new Curso();
         curso_2.setNombre("Programacion");
-        curso_2.setIdCurso(1);
         curso_2.setDescripcion("...");
         curso_2.setCosto(800);
         curso_2.setDocente_1(docente_2);
+        
+        System.out.println(12.4);
         
         
         

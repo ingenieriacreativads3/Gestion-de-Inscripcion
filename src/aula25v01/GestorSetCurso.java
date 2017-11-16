@@ -51,15 +51,61 @@ public class GestorSetCurso{
         
         if(formulario != null){
             
-            //Obtener datos, y los objetos seleccionados
-            //
-            //
+            //TODO hacer esto
+            
+            int cantidadCursosAntes = Curso.getListaCurso().size();
+            
+            //Obtener datos, y buscar los objetos seleccionados
+            //a partir de los datos ingresados
+            String nombre = formulario.jTextFieldNombre.getText();
+            double costo = Double.valueOf(formulario.jTextFieldCosto.getText());
+            int cupoMaximo = Integer.valueOf(formulario.jTextFieldCupoMaximo.getText());
+            int cupoMinimo = Integer.valueOf(formulario.jTextFieldCupoMinimo.getText());
+            String descripcion = formulario.jTextAreaDescripcion.getText();
+            Date fecha = formulario.jDateChooserFechaInicio.getDate();
+            
+            String nombreDocente = formulario.jComboBoxDocente.getItemAt(
+                    formulario.jComboBoxDocente.getSelectedIndex());
+            
+            System.out.println(nombreDocente);
+            
+            Docente docenteDelCurso = null;
+            for(Docente docenteActual : Docente.getListaDocente()){
+                
+                System.out.println(docenteActual.toString());
+                
+                if(docenteActual.toString() == nombreDocente){
+                    
+                    System.out.println("los nombres son iguales");
+                    docenteDelCurso = docenteActual;
+                    
+                }
+                
+            }
+            
+            System.out.println(formulario.jComboBoxDocente.getSelectedIndex());
+            
+            
+            System.out.println(Docente.getDocentePorId(formulario.jComboBoxDocente.getSelectedIndex()).getNombre());
+            
+            System.out.println(formulario.jComboBoxDocente.getItemAt(formulario.jComboBoxDocente.getSelectedIndex()));
+            //System.out.println(docenteDelCurso.getNombre());
+            
+            //Obtener un curso nuevo y asignarle los datos requeridos
+            
+            //Llevar la cuenta de la cnatidad de cursos
+            
+            //Verificar el proceso se realizo con exito
             
         }else{
             
             //...la variable fue inicializada con un valor por defecto
             
         }
+        
+        formulario.dispose();
+        
+        GestorRegistrarConsulta.iniciarAplicacion();
         
         return estadoADevolver;
         
