@@ -25,6 +25,16 @@ public class GestorRegistrarInscripcion{
         fInscripcionAlumno.jTextFieldTelefono.setVisible(false);
         fInscripcionAlumno.jButtonAceptarAlumExistente.setVisible(false);
         fInscripcionAlumno.jButtonAceptarAlumNoExistente.setVisible(false);
+        
+        for(Curso cursoAuxiliar : Curso.getListaCurso()){
+            
+            fInscripcionAlumno.jComboBoxCurso.addItem(cursoAuxiliar.getNombre());
+            
+            
+        }
+        
+        System.out.println(Curso.getListaCurso().spliterator());
+        
 
         //System.out.println(Alumno.getListaAlumno().size());
 

@@ -1,5 +1,4 @@
 package aula25v01;
-import com.sun.org.apache.xpath.internal.operations.Equals;
 import java.util.*;
 
 public class Curso implements MiState{

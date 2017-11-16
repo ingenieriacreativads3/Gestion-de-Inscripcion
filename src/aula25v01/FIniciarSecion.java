@@ -232,7 +232,7 @@ public class FIniciarSecion extends javax.swing.JFrame{
 
     private void jButtonSetCursoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonSetCursoMousePressed
         
-        GestorSetCurso.gestorJButtonSetCursoMousePressed();
+        boolean a = GestorSetCurso.gestorJButtonSetCursoMousePressed();
         this.dispose();
         
     }//GEN-LAST:event_jButtonSetCursoMousePressed

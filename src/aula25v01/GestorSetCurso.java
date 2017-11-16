@@ -7,7 +7,7 @@ public class GestorSetCurso{
     public GestorSetCurso(){
     }
     
-    public static void gestorJButtonSetCursoMousePressed(){
+    public static boolean gestorJButtonSetCursoMousePressed(){
         
         FSetCurso formularioActual = new FSetCurso();
         formularioActual.setTitle("Agregar nuevo curso");
@@ -19,6 +19,7 @@ public class GestorSetCurso{
         formularioActual.jLabelDocente.setText("Docente");
         formularioActual.jLabelFechaInicio.setText("Dia de inicio");
         formularioActual.jDateChooserFechaInicio.setDate(new Date());
+        formularioActual.jLabelDescripcion.setText("Descripción");
         
         formularioActual.jButtonAceptar.setText("Aceptar");
         formularioActual.jButtonCancelar.setText("Cancelar");
@@ -31,18 +32,36 @@ public class GestorSetCurso{
         
         formularioActual.show();
         
+        return true;
+        
     }
     
-    public static boolean asd(){
+    public static boolean gestorJButtonCancelarMousePressed(FSetCurso formulario){
+        
+        formulario.dispose();
+        GestorRegistrarConsulta.iniciarAplicacion();
         
         return true;
         
     }
     
-    public static void gestorJButtonCancelarMousePressed(FSetCurso formulario){
+    public static boolean gestorJButtonAceptarMousePressed(FSetCurso formulario){
         
-        formulario.dispose();
-        GestorRegistrarConsulta.iniciarAplicacion();
+        boolean estadoADevolver = false;
+        
+        if(formulario != null){
+            
+            //Obtener datos, y los objetos seleccionados
+            //
+            //
+            
+        }else{
+            
+            //...la variable fue inicializada con un valor por defecto
+            
+        }
+        
+        return estadoADevolver;
         
     }
     

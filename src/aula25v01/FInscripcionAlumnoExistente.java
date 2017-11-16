@@ -56,8 +56,6 @@ public class FInscripcionAlumnoExistente extends javax.swing.JFrame{
             }
         });
 
-        jComboBoxCurso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Frances", "Programacion", "" }));
-
         jButtonAceptarAlumExistente.setText("Aceptar");
         jButtonAceptarAlumExistente.setMaximumSize(new java.awt.Dimension(81, 32));
         jButtonAceptarAlumExistente.setMinimumSize(new java.awt.Dimension(81, 32));

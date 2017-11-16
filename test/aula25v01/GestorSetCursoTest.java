@@ -43,20 +43,22 @@ public class GestorSetCursoTest{
     @Test
     public void testGestorJButtonSetCursoMousePressed(){
         System.out.println("gestorJButtonSetCursoMousePressed");
-        GestorSetCurso.gestorJButtonSetCursoMousePressed();
+        boolean expResult = true;
+        boolean result = GestorSetCurso.gestorJButtonSetCursoMousePressed();
+        assertEquals(expResult, result);
         
     }
 
     /**
-     * Test of asd method, of class GestorSetCurso.
+     * Test of gestorJButtonCancelarMousePressed method, of class GestorSetCurso.
      */
     @Test
-    public void testAsd(){
-        System.out.println("asd");
+    public void testGestorJButtonCancelarMousePressed(){
+        System.out.println("gestorJButtonCancelarMousePressed");
+        FSetCurso formulario = null;
         boolean expResult = true;
-        boolean result = GestorSetCurso.asd();
+        boolean result = GestorSetCurso.gestorJButtonCancelarMousePressed(formulario);
         assertEquals(expResult, result);
-        
     }
 
     
