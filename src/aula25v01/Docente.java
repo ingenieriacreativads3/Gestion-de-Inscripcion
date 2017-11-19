@@ -84,6 +84,12 @@ public class Docente{
         
     }
     
+    public int getId(){
+        
+        return this.id;
+        
+    }
+    
     //Manejo de lista.
     
     public static Set<Docente> getListaDocente(){
@@ -110,11 +116,11 @@ public class Docente{
         
     }
     
-    public static Docente getDocentePorId(int dniActual){
+    public static Docente getDocentePorId(int idActual){
         
         for(Docente docenteActual : listaDocente){
             
-            if(docenteActual.getDni() == dniActual){
+            if(docenteActual.getId()== idActual){
                 
                 return docenteActual;
                 

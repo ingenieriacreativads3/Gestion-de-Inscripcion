@@ -6,12 +6,12 @@ public class Curso implements MiState{
     private String nombre;
     private int IdCurso;
     private String descripcion;
-    private float costo;
+    private double costo;
     private int cupoMin;
     private int cupoMax;
     private boolean enCuotas;
             //Verificar esto. Paga en cuotas o de contado creo.
-    private int diaInicio; //AAAAMMDD.    
+    private Date diaInicio; //AAAAMMDD.    
     private Docente docente_1;
     private Status miStatus;
     
@@ -19,8 +19,6 @@ public class Curso implements MiState{
     
     public Curso(){
         
-        
-        System.out.println(12.5);
         this.IdCurso = siguienteIdCurso();
         addListaCurso(this);
         
@@ -46,7 +44,7 @@ public class Curso implements MiState{
         
     }
     
-    public void setCosto(float costoAuxiliar){
+    public void setCosto(double costoAuxiliar){
         
         this.costo = costoAuxiliar;
         
@@ -70,7 +68,7 @@ public class Curso implements MiState{
         
     }
     
-    public void setDiaInicio(int diaInicioAuxiliar){
+    public void setDiaInicio(Date diaInicioAuxiliar){
         
         this.diaInicio = diaInicioAuxiliar;
         
@@ -96,7 +94,7 @@ public class Curso implements MiState{
         
     }
     
-    public float getCosto(){
+    public double getCosto(){
         
         return this.costo;
         
@@ -120,7 +118,7 @@ public class Curso implements MiState{
         
     }
     
-    public int getDiaInicio(){
+    public Date getDiaInicio(){
         
         return this.diaInicio;
         

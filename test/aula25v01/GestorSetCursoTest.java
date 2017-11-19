@@ -50,14 +50,13 @@ public class GestorSetCursoTest{
     }
 
     /**
-     * Test of gestorJButtonCancelarMousePressed method, of class GestorSetCurso.
+     * Test of gestorJButtonAceptarMousePressed method, of class GestorSetCurso.
      */
     @Test
-    public void testGestorJButtonCancelarMousePressed(){
-        System.out.println("gestorJButtonCancelarMousePressed");
-        FSetCurso formulario = null;
+    public void testGestorJButtonAceptarMousePressed(){
+        System.out.println("gestorJButtonAceptarMousePressed");
         boolean expResult = true;
-        boolean result = GestorSetCurso.gestorJButtonCancelarMousePressed(formulario);
+        boolean result = GestorSetCurso.gestorJButtonAceptarMousePressed();
         assertEquals(expResult, result);
     }
 

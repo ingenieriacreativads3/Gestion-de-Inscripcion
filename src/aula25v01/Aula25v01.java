@@ -24,7 +24,7 @@ public class Aula25v01{
         curso_1.setCupoMin(10);
         curso_1.setCupoMax(30);
         curso_1.setEnCuotas(false);
-        curso_1.setDiaInicio(20172209);
+        curso_1.setDiaInicio(new Date());
         curso_1.setDocente_1(docente_1);
         
        //NuevoDocente

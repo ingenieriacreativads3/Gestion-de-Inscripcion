@@ -51,10 +51,6 @@ public class GestorSetCurso{
         
         if(formulario != null){
             
-            //TODO hacer esto
-            
-            int cantidadCursosAntes = Curso.getListaCurso().size();
-            
             //Obtener datos, y buscar los objetos seleccionados
             //a partir de los datos ingresados
             String nombre = formulario.jTextFieldNombre.getText();
@@ -62,40 +58,47 @@ public class GestorSetCurso{
             int cupoMaximo = Integer.valueOf(formulario.jTextFieldCupoMaximo.getText());
             int cupoMinimo = Integer.valueOf(formulario.jTextFieldCupoMinimo.getText());
             String descripcion = formulario.jTextAreaDescripcion.getText();
-            Date fecha = formulario.jDateChooserFechaInicio.getDate();
+            Date fechaInicio = formulario.jDateChooserFechaInicio.getDate();
             
-            String nombreDocente = formulario.jComboBoxDocente.getItemAt(
-                    formulario.jComboBoxDocente.getSelectedIndex());
-            
-            System.out.println(nombreDocente);
+            int docenteSeleccionado = formulario.jComboBoxDocente.getSelectedIndex();
             
             Docente docenteDelCurso = null;
-            for(Docente docenteActual : Docente.getListaDocente()){
+            try{
                 
-                System.out.println(docenteActual.toString());
-                
-                if(docenteActual.toString() == nombreDocente){
+                for(Docente docenteActual : Docente.getListaDocente()){
                     
-                    System.out.println("los nombres son iguales");
-                    docenteDelCurso = docenteActual;
+                    if(docenteActual.getId() == docenteSeleccionado){
+                        
+                        docenteDelCurso = docenteActual;
+                        estadoADevolver = true;
+                        
+                    }else{
+                        
+                        //...si la asigancion se realiza en la iteracion n,
+                        //...en la iteracion n+1, pasa por este camino,
+                        //...por esto, no puedo colocar una asiganacion
+                        //...de estado de error, en este camino
+                        
+                    }
                     
                 }
                 
+                
+            }catch(Exception e){
+                
+                //...el estado fue inicializado con un valor por defecto.
+                        
             }
             
-            System.out.println(formulario.jComboBoxDocente.getSelectedIndex());
-            
-            
-            System.out.println(Docente.getDocentePorId(formulario.jComboBoxDocente.getSelectedIndex()).getNombre());
-            
-            System.out.println(formulario.jComboBoxDocente.getItemAt(formulario.jComboBoxDocente.getSelectedIndex()));
-            //System.out.println(docenteDelCurso.getNombre());
-            
             //Obtener un curso nuevo y asignarle los datos requeridos
-            
-            //Llevar la cuenta de la cnatidad de cursos
-            
-            //Verificar el proceso se realizo con exito
+            Curso nuevoCurso = new Curso();
+            nuevoCurso.setNombre(nombre);
+            nuevoCurso.setCosto(costo);
+            nuevoCurso.setCupoMin(cupoMinimo);
+            nuevoCurso.setCupoMax(cupoMaximo);
+            nuevoCurso.setDocente_1(docenteDelCurso);
+            nuevoCurso.setDiaInicio(fechaInicio);
+            nuevoCurso.setDescripcion(descripcion);
             
         }else{
             
@@ -111,6 +114,11 @@ public class GestorSetCurso{
         
     }
     
+    public static boolean gestorJButtonAceptarMousePressed(){
+        
+        return true;
+        
+    }
     
 }
     
