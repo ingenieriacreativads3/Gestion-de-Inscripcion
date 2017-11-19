@@ -56,7 +56,19 @@ public class Docente{
     
     public String getNombre(){
         
-        return this.nombre;
+        String nombreDevolver = null;
+        
+        if(this.nombre != null){
+            
+            nombreDevolver = this.nombre;
+            
+        }else{
+            
+            //...fue inicializado con un valor por defecto
+            
+        }
+        
+        return nombreDevolver;
         
     }
     
@@ -74,7 +86,19 @@ public class Docente{
     
     public String getTituloHabilitante(){
         
-        return this.tituloHabilitante;
+        String tituloActual = null;
+        
+        if(tituloHabilitante != null){
+            
+            tituloActual = tituloHabilitante;
+            
+        }else{
+            
+            //...fue iicializado con un valor por defecto
+            
+        }
+        
+        return tituloActual;
         
     }
     
@@ -94,7 +118,19 @@ public class Docente{
     
     public static Set<Docente> getListaDocente(){
         
-        return listaDocente;
+        Set<Docente> listaDevolver = null;
+        
+        for(Docente docenteActual : listaDocente){
+            
+            if(docenteActual != null){
+                
+                listaDevolver = listaDocente;
+                
+            }
+            
+        }
+        
+        return listaDevolver;
         
     }
     
@@ -161,7 +197,37 @@ public class Docente{
     @Override
     public String toString(){
         
-        return this.nombre + " " + this.apellido;
+        String nombreDocente = null;
+        
+        if(this.nombre != null){
+            
+            nombreDocente = this.nombre;
+            
+            if(this.apellido != null){
+                
+                nombreDocente = nombreDocente + " " + this.apellido;
+                
+            }else{
+                
+                //...fue inicializado con un valor por defecto
+                
+            }
+            
+        }else{
+            
+            if(this.apellido != null){
+                
+                nombreDocente = apellido;
+                
+            }else{
+                
+                //...fue inicializado con un valor por defecto
+                
+            }
+            
+        }
+        
+        return nombreDocente;
         
     }
     

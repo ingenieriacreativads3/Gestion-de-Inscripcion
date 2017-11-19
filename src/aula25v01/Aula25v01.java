@@ -7,6 +7,7 @@ public class Aula25v01{
     
     public static void main(String[] args){
         
+        
         //NuevoDocente
         Docente docente_1 = new Docente();
         docente_1.setNombre("Damian");
@@ -27,7 +28,7 @@ public class Aula25v01{
         curso_1.setDiaInicio(new Date());
         curso_1.setDocente_1(docente_1);
         
-       //NuevoDocente
+        //NuevoDocente
         Docente docente_2 = new Docente();
         docente_2.setNombre("Pablo");
         docente_2.setApellido("Lopez");
